@@ -20,3 +20,4 @@ function decreaseValue() {
   value < 1 ? value = 1 : '';
   value--;
   document.getElementById('number').value = value;
+}
