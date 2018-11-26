@@ -1,0 +1,115 @@
+.recipecontainer {
+    border: black;
+    border-style: solid;
+    border-width: 2px 2px 2px 2px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.foodtitle {
+    width: 100%;
+    font-size: 3rem;
+    padding: 1rem;
+    margin: 0;
+}
+
+.recipedetails {
+    width: 50%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 0;
+}
+
+.userinfo {
+    border: black;
+    border-style: solid;
+    border-width: 2px 2px 2px 2px;
+    width: 35%;
+    margin: 0;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    background-color: antiquewhite;
+}
+
+
+.recipeimage {
+    width: 100%;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 0;
+}
+
+.recipeimage > img {
+    width: 100%;
+
+}
+
+.recipetitle {
+    width: 100%;
+    padding-left: 1rem;
+    text-decoration: underline;
+    font-size: 2rem;
+}
+
+.ingredientlist {
+    margin: 0;
+    padding-left: 2rem;
+    list-style: none;
+    width: 100%
+}
+
+.doseclicker {
+    width: 30%;
+    margin: 0;
+    padding-top: 0.5rem;
+}
+
+form {
+    width: 25%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.value-button {
+    display: inline-block;
+    border: 1px solid #ddd;
+    margin: 0px;
+    width: 40px;
+    height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 11px 0;
+    background: #eee;
+    user-select: none;
+}
+
+form #decrease {
+    margin-right: -4px;
+    border-radius: 8px 0 0 8px;
+}
+
+form #increase {
+    margin-left: -4px;
+    border-radius: 0 8px 8px 0;
+}
+
+form #input-wrap {
+    margin: 0px;
+    padding: 0px;
+}
+
+input#number {
+    text-align: center;
+    border: none;
+    margin: 0px;
+    width: 40px;
+    height: 40px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
