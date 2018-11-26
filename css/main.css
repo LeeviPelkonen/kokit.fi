@@ -36,12 +36,15 @@
     color: rgb(80, 189, 32);
 }
 /*------------------------------------------------*/
-.nappi{
+html{
+    scroll-behavior: smooth;
+}
+.button{
     padding: 0 1rem 0 1rem;
     line-height: 3rem;
     display: block;
 }
-.nappi:hover{
+.button:hover{
     background-color:rgb(112, 220, 66);
 }
 body{
@@ -56,6 +59,7 @@ a{
     text-decoration: none;
 }
 #container{
+    position: relative;
     max-width: 80rem;
     margin: auto;
     display: flex;
@@ -64,6 +68,8 @@ a{
 header {
     width: 100%;
     margin: 2rem 0 0 0;
+    position: sticky;
+    top: 0;
 }
 h1{
     width: 100%;
@@ -77,26 +83,7 @@ h2{
     text-align: center;
     margin: 0 0 0 0;
 }
-#logo{
-    width: 100%;
-    text-align: center;
-    margin: 0;
-}
-
-#logo img:first-child {
-    width: 14%;
-    float: left;
-}
-#logo img:last-child {
-    width: 86%;
-    float: left;
-}
-#palkki{
-    display: none;
-    height: 4rem;
-    width: 100%;
-}
-#paavalikko ul{
+#navigation ul{
     display: flex;
     justify-content: space-around;
     list-style-type: none;
@@ -104,21 +91,21 @@ h2{
     margin: 0 0 0 0;
     width: 100%;
 }
-#paavalikko li:first-child {
+#navigation li:first-child {
     display: none;
 }
+#advsearch {
+    display: none;
+  }
 nav{
     width: 100%;
     font-weight: 600;
 }
-#gamespecs ul{
+#search ul{
     display: flex;
     list-style-type: none;
     padding: 0;
     margin: 0;
-}
-#specs{
-    display: none;
 }
 section{
     width: 18rem;
@@ -142,13 +129,13 @@ footer{
 }
 @media screen and (max-width: 650px) {
     
-    #paavalikko ul{
+    #naviogation ul{
         display: block;
     }
-    #paavalikko li {
+    #naviogation li {
         display: none;
     }
-    #paavalikko li:first-child {
+    #naviogation li:first-child {
         display: list-item;
     }
 }
