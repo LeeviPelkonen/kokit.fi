@@ -1,0 +1,131 @@
+﻿<!DOCTYPE HTML>
+<HTML>
+    <head>
+        <title>nettisivu </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Mako" rel="stylesheet">
+        <link href="font/stylesheet.css" rel="sylesheet">
+        <link href="css/main.css" rel="stylesheet">
+    </head>
+    <body class="beige-b">
+        <div id="container">
+            <header>
+                <section id="palkki"></section>
+                <nav id="paavalikko" class="red-b">
+                    <ul>
+                        <li>
+                            <a href="#" class="nappi">&#9776;</a>
+                        </li>
+                        <li>
+                            <img src="img/kokitlogopieni60.png" class="nappi" alt="kokit.fi">
+                        </li>
+                        <li>
+                            <a href="story.html" class="nappi">Search recipes</a>
+                        </li>
+                        <li>
+                            <a href="characters.html" class="nappi">Most popular</a>
+                        </li>
+                        <li>
+                            <a href="download.html" class="nappi">Quick recipes</a>
+                        </li>
+                        <li>
+                            <a href="fine.html" class="nappi">Fine dining recipes</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+                <nav id="gamespecs" class="light-b">
+                    <ul>
+                        <li>
+                            <a href="#" class="nappi">Search recipes</a>
+                        </li>
+                        <p id="specs">
+                            Food is any substance[1] consumed to provide nutritional support for an organism. It is usually of plant or animal origin, and contains essential nutrients, such as carbohydrates, fats, proteins, vitamins, or minerals. The substance is ingested by an organism and assimilated by the organism's cells to provide energy, maintain life, or stimulate growth.
+                            Historically, humans secured food through two methods: hunting and gathering and agriculture. Today, the majority of the food energy required by the ever increasing population of the world is supplied by the food industry.
+                            Food safety and food security are monitored by agencies like the International Association for Food Protection, World Resources Institute, World Food Programme, Food and Agriculture Organization, and International Food Information Council. They address issues such as sustainability, biological diversity, climate change, nutritional economics, population growth, water supply, and access to food.
+                            The right to food is a human right derived from the International Covenant on Economic, Social and Cultural Rights (ICESCR), recognizing the "right to an adequate standard of living, including adequate food", as well as the "fundamental right to be free from
+                        </p>
+                    </ul>
+                </nav>
+            <main class="grey-b white-t">
+                <h3>Popular right now</h3>
+                <article>
+                    <figure>
+                        <img src="img/steak.jpg" alt="food stuff">
+                    </figure>
+                    <h4>food stuff</h4>
+                    <p>
+                        Food is any substance[1] consumed to provide nutritional support for an organism. It is usually of plant or animal origin, and contains essential nutrients, such as carbohydrates, fats, proteins, vitamins, or minerals. The substance is ingested by an organism and assimilated by the organism's cells to provide energy, maintain life, or stimulate growth.
+                        Historically, humans secured food through two methods: hunting and gathering and agriculture. Today, the majority of the food energy required by the ever increasing population of the world is supplied by the food industry.
+                        Food safety and food security are monitored by agencies like the International Association for Food Protection, World Resources Institute, World Food Programme, Food and Agriculture Organization, and International Food Information Council. They address issues such as sustainability, biological diversity, climate change, nutritional economics, population growth, water supply, and access to food.
+                        The right to food is a human right derived from the International Covenant on Economic, Social and Cultural Rights (ICESCR), recognizing the "right to an adequate standard of living, including adequate food", as well as the "fundamental right to be free from
+                    </p>
+                </article>
+                <section id="space"></section>
+                <article>
+                    <figure>
+                        <img src="img/steak.jpg" alt="more food stuff">
+                    </figure>
+                    <h4>more food stuff</h4>
+                    <p>
+                        Food is any substance[1] consumed to provide nutritional support for an organism. It is usually of plant or animal origin, and contains essential nutrients, such as carbohydrates, fats, proteins, vitamins, or minerals. The substance is ingested by an organism and assimilated by the organism's cells to provide energy, maintain life, or stimulate growth.
+                        Historically, humans secured food through two methods: hunting and gathering and agriculture. Today, the majority of the food energy required by the ever increasing population of the world is supplied by the food industry.
+                        Food safety and food security are monitored by agencies like the International Association for Food Protection, World Resources Institute, World Food Programme, Food and Agriculture Organization, and International Food Information Council. They address issues such as sustainability, biological diversity, climate change, nutritional economics, population growth, water supply, and access to food.
+                        The right to food is a human right derived from the International Covenant on Economic, Social and Cultural Rights (ICESCR), recognizing the "right to an adequate standard of living, including adequate food", as well as the "fundamental right to be free from
+                    </p>
+                </article>
+                <section id="space"></section>
+                <article>
+                        <h4>even more food stuff</h4>
+                        <p>Unity is a game engine that can be operated using C# or JavaScript. Unity is the most used game engine around the world. The reason
+                             for its fame is how easy it is to use. Thats why most programmers start with Unity, when the start making games.
+                        </p>
+                    </article>
+                    <article>
+                        <figure>
+                            <img src="img/steak.jpg" alt="tent">
+                        </figure>
+                        <h4>Blender</h4>
+                        <p>Blender is a 3D modeling software. It is really easy to use once u start using it. The models we used in our project
+                            were just basic cube or cone shaped models that are really fast and easy to make in blender. Exporting complete models to Unity was 
+                            little hard at first but we decided not to export textures with them and just later add them in Unity.
+                        </p>
+                    </article>
+            </main>
+            <footer class="red-b">kokit.fi</footer>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+          $('#paavalikko li:first-child').click(function(evt) {
+            evt.preventDefault();
+            $('#paavalikko li:not(:first-child)').slideToggle(400);
+          });
+        </script>
+        <script>
+                $('#gamespecs li:first-child').click(function(evt) {
+                  evt.preventDefault();
+                  $('#gamespecs p').slideToggle(400);
+                });
+              </script>
+        <script>
+         var vierivaMenu = function() {
+            if ($(window).scrollTop() > 32) {
+                //console.log($(window).scrollTop());
+                var navWidth = $('nav').width();
+                var navHeight = $('nav').height();
+                var mainPos = $('main').position();
+                //console.log(Number(mainPos.left)+16);
+                $('#paavalikko').attr('style', 'position:fixed;  top:0;  left: '+Number(mainPos.left)+'px; width: '+Number(navWidth)+'px;');
+                $('#palkki').show();
+            } else {
+                $('#paavalikko').attr('style', 'position:static;');
+                $('#palkki').hide();
+                
+            }
+         }
+          $(window).scroll(vierivaMenu);
+          $(window).resize(vierivaMenu);
+        </script>
+    </body>
+</html>

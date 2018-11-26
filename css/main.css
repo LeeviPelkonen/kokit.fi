@@ -1,0 +1,154 @@
+/*värit*/
+.black-b{
+    background-color:#0000;
+}
+.black-t{
+    color:#0000;
+}
+.white-b{
+    background-color:#000000;
+}
+.white-t{
+    color:#000000;
+}
+.beige-b{
+    background-color: rgb(255, 255, 255);
+}
+.beige-t{
+    color: rgb(255, 255, 255);
+}
+.light-b{
+    background-color: rgba(255, 255, 255,0.9);
+}
+.light-t{
+    color: rgb(255, 255, 255);
+}
+.grey-b{
+    background-color: rgba(255, 255, 255,0.9);
+}
+.grey-t{
+    color: rgb(255, 255, 255);
+}
+.red-b{
+    background-color: rgb(80, 189, 32);
+}
+.red-t{
+    color: rgb(80, 189, 32);
+}
+/*------------------------------------------------*/
+.nappi{
+    padding: 0 1rem 0 1rem;
+    line-height: 3rem;
+    display: block;
+}
+.nappi:hover{
+    background-color:rgb(112, 220, 66);
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "mako", sans-serif;
+    background-image: url("pizza-2068272_1920edit.png");
+    background-attachment: fixed;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+#container{
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+header {
+    width: 100%;
+    margin: 2rem 0 0 0;
+}
+h1{
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 3rem;
+    margin: 0 0 0 0;
+    font-family: "fredericka the great";
+}
+h2{
+    text-align: center;
+    margin: 0 0 0 0;
+}
+#logo{
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+
+#logo img:first-child {
+    width: 14%;
+    float: left;
+}
+#logo img:last-child {
+    width: 86%;
+    float: left;
+}
+#palkki{
+    display: none;
+    height: 4rem;
+    width: 100%;
+}
+#paavalikko ul{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 1rem;
+    margin: 0 0 0 0;
+    width: 100%;
+}
+#paavalikko li:first-child {
+    display: none;
+}
+nav{
+    width: 100%;
+    font-weight: 600;
+}
+#gamespecs ul{
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+#specs{
+    display: none;
+}
+section{
+    width: 18rem;
+    padding: 1rem;
+}
+main{
+    padding: 1rem;
+    box-sizing: border-box;
+}
+article figure{
+    float: left;
+    margin: 0 1rem 0 0;
+    text-align: center;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+footer{
+    width: 100%;
+}
+@media screen and (max-width: 650px) {
+    
+    #paavalikko ul{
+        display: block;
+    }
+    #paavalikko li {
+        display: none;
+    }
+    #paavalikko li:first-child {
+        display: list-item;
+    }
+}

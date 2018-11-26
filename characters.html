@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<HTML>
+    <head>
+        <title>nettisivu </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Mako" rel="stylesheet">
+        <link href="font/stylesheet.css" rel="sylesheet">
+        <link href="css/characters.css" rel="stylesheet">
+    </head>
+    <body class="beige-b">
+        <div id="container">
+            <header>
+                <h1>Characters</h1>
+                <h2></h2>
+                <figure id="logo">
+                    <img id="cactus" src="img/cactus.png" alt="cactus">
+                </figure>
+            </header>
+            <section id="palkki"></section>
+            <nav id="paavalikko"class="red-b">
+                <ul>
+                    <li>
+                        <a href="#" class="nappi">&#9776;</a>
+                   </li>
+                   <li>
+                       <a href="index.html" class="nappi">front page</a>
+                   </li>
+                   <li>
+                        <a href="story.html" class="nappi">story</a>
+                   </li>
+                   <li>
+                       <a href="characters.html" class="nappi">characters</a>
+                  </li>
+                   <li>
+                        <a href="download.html" class="nappi">download</a>
+                   </li>
+                </ul>
+            </nav>
+            <main class="grey-b white-t">
+                <article>
+                    <figure>
+                        <img src="img/JJ.png" alt="JJ">
+                    </figure>
+                    <h4>J.J. Jackson</h4>
+                    <p>V.P. Jackson´s brother and the games main character. Some people say that J.J. is little retarded, but J.J. thinks he just have a really bad memory.
+                </article>
+                <article>
+                    <figure>
+                        <img src="img/NPC1.png" alt="VP">
+                    </figure>
+                    <h4>V.P. Jackson</h4>
+                    <p>J.J. Jackson´s brother and the master mind of the Jackson brothers. Tries to get rid of his brother cause he is just slowing him down.
+                </article>
+                <article>
+                    <figure>
+                        <img src="img/Shaman.png" alt="shaman">  
+                    </figure>
+                    <h4>Shaman</h4>
+                    <p>Does not speak very often, but when he does he speaks to himself. lives on top of mountain.
+                </article>
+                <article>
+                    <figure>
+                        <img src="img/Chief.png" alt="chief">
+                    </figure>
+                    <h4>Standing Buffalo</h4>
+                    <p>Inuin chief, very tough looking guy. Likes to stand allday in front of his tent and watch as people pass by. 
+                </article>
+                <article>
+                    <figure>
+                        <img src="img/NPC2.png" alt="billy">
+                    </figure>
+                    <h4>Billy Bob</h4>
+                    <p>Just some random guy who´s just passing by.
+                </article>
+                <article>
+                    <figure>
+                        <img src="img/Bartender.png" alt="bartender">
+                    </figure>
+                    <h4>Bartender</h4>
+                    <p>Bartender, just bartender...
+                </article>
+                <article>
+                    <figure>
+                        <img src="img/Indian.png" alt="quit a story">
+                    </figure>
+                    <h4>Jolly Coyote</h4>
+                    <p>Just drunk inuin who´s allways at the saloon.
+                </article>
+               
+            </main>
+            <footer class="red-b">Leevi Pelkonen</footer>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+          $('#paavalikko li:first-child').click(function(evt) {
+            evt.preventDefault();
+            $('#paavalikko li:not(:first)').slideToggle(400);
+          });
+        </script>
+        <script>
+         var vierivaMenu = function() {
+            if ($(window).scrollTop() > 567) {
+                //console.log($(window).scrollTop());
+                var navWidth = $('nav').width();
+                var navHeight = $('nav').height();
+                var mainPos = $('main').position();
+                //console.log(Number(mainPos.left)+16);
+                $('#paavalikko').attr('style', 'position:fixed;  top:0;  left: '+Number(mainPos.left)+'px; width: '+Number(navWidth)+'px;');
+                $('#palkki').show();
+            } else {
+                $('#paavalikko').attr('style', 'position:static;');
+                $('#palkki').hide();
+                
+            }
+         }
+          $(window).scroll(vierivaMenu);
+          $(window).resize(vierivaMenu);
+        </script>
+        
+    </body>
+</html>
