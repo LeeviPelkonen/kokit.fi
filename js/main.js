@@ -1,4 +1,4 @@
-function openSeach() {
+function openSearch() {
   var x = document.getElementById("advsearch");
   if (x.style.display === "none") {
       x.style.display = "block";
