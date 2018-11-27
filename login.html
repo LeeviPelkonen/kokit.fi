@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="Chrome">
     <title>Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="login.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/login.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -26,11 +26,22 @@
 
             <button type="submit">Login</button>
         </div>
-        <div class="container" style="background-image:url(img/pizza-2068272_1920edit.png)">
+        <div class="container" style="background-color:#fefefe">
             <button type="button" onclick="document.getElementById('id01').style.display='none'" class ="cancelbtn">Cancel</button>
             <span class="psw">Forgot <a href="#">password</a></span>
         </div>
         </form>
     </div>
+    <script>
+      // Get the modal
+      const modal = document.getElementById('id01');
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = event => {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      }
+    </script>
 </body>
 </html>
