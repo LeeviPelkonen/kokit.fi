@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="Chrome">
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="login.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <button class="btn" onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-home"></i></button>
+    <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close modal">%times;</span>
+        <form class="modal-content animate" action="/action_page.php">
+        <div class="imgcontainer">
+            <img src="img_avatar2.png" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter username" name="uname" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter password" name="psw" required>
+
+            <button type="submit">Login</button>
+        </div>
+        <div class="container" style="background-image:url(/img/)">
+
+        </div>
+        </form>
+    </div>
+</body>
+</html>
