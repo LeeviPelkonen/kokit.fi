@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <button class="btn" onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-home"></i></button>
+    <button class="logbutton" id="logbutton"><i class="fa fa-user" style="font-size: 24px"></i></button>
     <div id="id01" class="modal">
-        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close modal">%times;</span>
         <form class="modal-content animate" action="/action_page.php">
         <div class="imgcontainer">
             <img src="#" alt="Avatar" class="avatar">
+            <span class="close" title="Close modal" id="login">&#10006;</span>
         </div>
 
         <div class="container">
@@ -24,24 +24,14 @@
             <label for="psw"><b>Password</b></label>
             <input type="password" placeholder="Enter password" name="psw" required>
 
-            <button type="submit">Login</button>
+            <button class="button" type="submit">Login</button>
         </div>
         <div class="container" style="background-color:#fefefe">
-            <button type="button" onclick="document.getElementById('id01').style.display='none'" class ="cancelbtn">Cancel</button>
+            <button type="button" class ="cancelbtn" id="cancelbtn">Cancel</button>
             <span class="psw">Forgot <a href="#">password</a></span>
         </div>
         </form>
     </div>
-    <script>
-      // Get the modal
-      const modal = document.getElementById('id01');
-
-      // When the user clicks anywhere outside of the modal, close it
-      window.onclick = event => {
-        if (event.target === modal) {
-          modal.style.display = "none";
-        }
-      }
-    </script>
+    <script src="js/login.js"></script>
 </body>
 </html>
