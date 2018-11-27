@@ -1,10 +1,27 @@
-function openSearch() {
-  var x = document.getElementById("advsearch");
-  if (x.style.display === "none") {
-      x.style.display = "block";
+function openSearch(evt) {
+  evt.preventDefault();
+  var x = document.querySelectorAll(".advsearch");
+  x.forEach((li)=>{
+  if (li.classList.contains('hiddenFull')) {
+    li.classList.add('visibleFull');
+    li.classList.remove('hiddenFull');
+} else {
+    li.classList.add('hiddenFull');
+    li.classList.remove('visibleFull');
+    }
+  })
+}
+
+function openMenu(evt) {
+  evt.preventDefault();
+  var x = document.querySelectorAll(".nav");
+  x.forEach((li)=>{
+    if (li.classList.contains('hidden')) {
+      li.classList.remove('hidden');
   } else {
-      x.style.display = "none";
-  }
+      li.classList.add('hidden');
+    }
+  })
 }
 
 function increaseValue() {
@@ -21,3 +38,5 @@ function decreaseValue() {
   value--;
   document.getElementById('number').value = value;
 }
+document.getElementById('burger').addEventListener('click',openMenu);
+document.getElementById('openSearch').addEventListener('click',openSearch);
