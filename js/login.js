@@ -1,10 +1,6 @@
-document.getElementById('login').addEventListener("click", away);
+document.getElementById('login').addEventListener("click", close);
 document.getElementById('logbutton').addEventListener("click", show);
 document.getElementById('cancelbtn').addEventListener("click", close);
-
-function away() {
-document.getElementById('id01').style.display='none';
-}
 
 function show() {
   document.getElementById('id01').style.display="block";
