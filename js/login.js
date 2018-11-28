@@ -1,6 +1,5 @@
 document.getElementById('login').addEventListener("click", close);
 document.getElementById('logbutton').addEventListener("click", show);
-document.getElementById('cancelbtn').addEventListener("click", close);
 
 function show() {
   document.getElementById('id01').style.display="block";
