@@ -14,13 +14,16 @@ function openSearch(evt) {
 
 function openMenu(evt) {
   evt.preventDefault();
-  var x = document.querySelectorAll(".nav");
-  x.forEach((li)=>{
-    if (li.classList.contains('hidden')) {
-      li.classList.remove('hidden');
-  } else {
-      li.classList.add('hidden');
-    }
+  var x = document.querySelectorAll(".advnav");
+  x.forEach((li) => {
+      if (li.classList.contains('hidden')) {
+          console.log(li.firstChild.classList);
+          li.classList.add('visible');
+          li.classList.remove('hidden');
+      } else {
+          li.classList.remove('visible');
+          li.classList.add('hidden');
+      }
   })
 }
 

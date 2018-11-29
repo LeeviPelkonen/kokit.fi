@@ -129,11 +129,19 @@ footer{
 }
 .advsearch{
     display: block;
-    height: 20px;
+    height: 10px;
     opacity: 1;
     -webkit-transition: height 1s, opacity 1s; /* Safari */
     transition: height 1s, opacity 1s;
 }
+.advnav{
+    display: block;
+    height: 0px;
+    opacity: 1;
+    -webkit-transition: height 1s, opacity 1s; /* Safari */
+    transition: height 1s, opacity 1s;
+}
+
 .hiddenFull{
     opacity: 0;
     height: 0px;
@@ -141,7 +149,6 @@ footer{
 .visibleFull{
     height: 300px;
 }
-
 @media screen and (max-width: 650px) {
     
     #navigation ul{
@@ -164,6 +171,17 @@ footer{
         padding-right: 1rem;
     }
     .hidden {
+        opacity: 0;
+        height: 0px;
+        pointer-events: none;
+    }
+    .hidden a{
+        pointer-events: inherit;
+    }
+    .visible{
+        height: 50px;
+    }
+    .clickable{
         display: none;
     }
 }
