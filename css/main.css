@@ -138,8 +138,8 @@ footer{
     display: block;
     height: 0px;
     opacity: 1;
-    -webkit-transition: height 1s, opacity 1s; /* Safari */
-    transition: height 1s, opacity 1s;
+    -webkit-transition: height 1s, opacity 0.5s; /* Safari */
+    transition: height 1s, opacity 0.5s;
 }
 
 .hiddenFull{
