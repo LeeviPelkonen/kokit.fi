@@ -28,6 +28,7 @@ function openMenu(evt) {
 }
 
 function increaseValue() {
+  console.log('working');
   var value = parseInt(document.getElementById('number').value, 10);
   value = isNaN(value) ? 0 : value;
   value++;
@@ -43,3 +44,15 @@ function decreaseValue() {
 }
 document.getElementById('burger').addEventListener('click',openMenu);
 document.getElementById('openSearch').addEventListener('click',openSearch);
+
+
+const addButton = document.getElementById("increase");
+addButton.addEventListener("click", (evt) => {
+  console.log(document.getElementById("increase"));
+  increaseValue();
+});
+
+addButton.addEventListener("mousedown", (evt) => {
+  addButton.classList.add("animationbutton");
+  console.log(addButton);
+});
