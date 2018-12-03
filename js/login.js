@@ -15,15 +15,6 @@ function reg() {
   document.getElementById('id02').style.display="block";
 }
 
-// Get the modal
-
-
-// When the user clicks anywhere outside of the modal, close it
-// window.onclick = event1 => {
-//   if (event1.target === modal1) {
-//     modal1.style.display = "none";
-//   }
-// };
 
 // Get the modal
 const modal2 = document.getElementById('id02');
