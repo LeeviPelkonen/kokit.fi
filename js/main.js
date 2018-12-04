@@ -11,7 +11,7 @@ function openSearch(evt) {
     }
   })
 
-  var x = document.querySelectorAll(".fa");
+  var x = document.querySelectorAll("#openSearchButton");
   x.forEach((li) => {
       if (li.classList.contains('fa-angle-down')) {
           li.classList.add('fa-angle-up');
@@ -82,7 +82,7 @@ window.onclick = event => {
 };
 
 document.getElementById('burger').addEventListener('click',openMenu);
-document.getElementById('openSearch').addEventListener('click',openSearch);
+document.getElementById('openSearchButton').addEventListener('click',openSearch);
 
 const addButton = document.getElementById("increase");
 addButton.addEventListener("click", (evt) => {
