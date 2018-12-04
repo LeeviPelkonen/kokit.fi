@@ -62,6 +62,16 @@ button:hover {
      cursor: pointer;
  }
 
+ .closebtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+    color: white;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+}
+
 /* Center the avatar image inside this container */
 .imgcontainer {
     text-align: center;
@@ -159,6 +169,9 @@ span.psw {
         float: none;
     }
     .cancelbtn {
+        width: 100%;
+    }
+    .closebtn {
         width: 100%;
     }
 
