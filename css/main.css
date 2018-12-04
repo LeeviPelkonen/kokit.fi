@@ -214,7 +214,7 @@ footer{
 }
 
 /* Bordered form */
-form {
+form#loginform {
     border: 1rem solid #f1f1f1;
 }
 
