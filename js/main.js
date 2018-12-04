@@ -10,6 +10,17 @@ function openSearch(evt) {
     li.classList.remove('visibleFull');
     }
   })
+
+  var x = document.querySelectorAll(".fa");
+  x.forEach((li) => {
+      if (li.classList.contains('fa-angle-down')) {
+          li.classList.add('fa-angle-up');
+          li.classList.remove('fa-angle-down');
+      } else {
+          li.classList.add('fa-angle-down');
+          li.classList.remove('fa-angle-up');
+      }
+  })
 }
 
 function openMenu(evt) {
@@ -26,36 +37,14 @@ function openMenu(evt) {
   })
 }
 
-// function increaseValue() {
-//   console.log('working');
-//   var value = parseInt(document.getElementById('number').value, 10);
-//   value = isNaN(value) ? 0 : value;
-//   value++;
-//   document.getElementById('number').value = value;
-// }
+function increaseValue() {
+  console.log('working');
+  var value = parseInt(document.getElementById('number').value, 10);
+  value = isNaN(value) ? 0 : value;
+  value++;
+  document.getElementById('number').value = value;
 
-// function decreaseValue() {
-//   var value = parseInt(document.getElementById('number').value, 10);
-//   value = isNaN(value) ? 0 : value;
-//   value < 1 ? value = 1 : '';
-//   value--;
-//   document.getElementById('number').value = value;
-// }
-
-document.getElementById('burger').addEventListener('click',openMenu);
-document.getElementById('openSearch').addEventListener('click',openSearch);
-
-// const addButton = document.getElementById("increase");
-
-// addButton.addEventListener("click", (evt) => {
-//   console.log(document.getElementById("increase"));
-//   increaseValue();
-// });
-
-// addButton.addEventListener("mousedown", (evt) => {
-//   addButton.classList.add("animationbutton");
-//   console.log(addButton);
-// });
+}
 
 document.getElementById('login').addEventListener("click", close);
 document.getElementById('logbutton').addEventListener("click", show);
@@ -65,6 +54,7 @@ document.getElementById('closebtn').addEventListener("click", exit);
 function show() {
   document.getElementById('id01').style.display="block";
 }
+
 
 function close() {
   document.getElementById('id01').style.display="none";
@@ -90,3 +80,18 @@ window.onclick = event => {
     modal1.style.display = "none";
   }
 };
+
+document.getElementById('burger').addEventListener('click',openMenu);
+document.getElementById('openSearch').addEventListener('click',openSearch);
+
+const addButton = document.getElementById("increase");
+addButton.addEventListener("click", (evt) => {
+  console.log(document.getElementById("increase"));
+  increaseValue();
+});
+
+addButton.addEventListener("mousedown", (evt) => {
+  addButton.classList.add("animationbutton");
+  console.log(addButton);
+});
+

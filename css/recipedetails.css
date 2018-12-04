@@ -60,7 +60,7 @@
 }
 
 .doseclicker {
-    width: 30%;
+    width: 70%;
     margin: 0;
     padding-top: 0.5rem;
 }
@@ -72,17 +72,10 @@ form {
     padding-top: 50px;
 }
 
-.value-button {
-    display: inline-block;
-    border: 1px solid #ddd;
-    margin: 0px;
-    width: 40px;
-    height: 20px;
-    text-align: center;
-    vertical-align: middle;
-    padding: 11px 0;
-    background: #eee;
-    user-select: none;
+.valuebutton {
+    width: 50px;
+    height: 50px;
+    padding-top: 2rem;
 }
 
 form #decrease {
@@ -108,8 +101,20 @@ input#number {
     height: 40px;
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
+#recipefigure {
+    width: 50%;
+    padding: 0;
     margin: 0;
+}
+
+.instructions {
+    width: 45%;
+    margin: 0;
+    padding-top: 2rem;
+}
+
+.animationbutton {
+    background-color: coral;
+    color: black;
+    font-size: 25px;
 }

@@ -95,7 +95,9 @@ h2{
     margin: 0 0 0 0;
     width: 100%;
 }
+
 #navigation li:nth-child(3) {
+
     display: none;
 }
 #advsearch {
@@ -168,6 +170,7 @@ footer{
 .visibleFull{
     height: 300px;
 }
+
 @media screen and (max-width: 481px) {
     
     #navigation ul{
@@ -206,6 +209,7 @@ footer{
         align-self: flex-start;
         width: 65%;
         padding: 0.5rem 1rem;
+
     }
 }
 
@@ -432,5 +436,8 @@ span.psw {
         border: 1px solid #888;
         width: 90%; /* Could be more or less, depending on screen size */
         position: relative;
+
     }
 }
+
+
