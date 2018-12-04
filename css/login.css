@@ -75,7 +75,7 @@ img.avatar {
 }
 
 /* Add padding to containers */
-.container {
+.lcontainer {
     padding: 16px;
 }
 
@@ -174,7 +174,7 @@ span.psw {
         font-size: 18px;
     }
 
-    .container {
+    .lcontainer {
         padding: 15px;
     }
 
