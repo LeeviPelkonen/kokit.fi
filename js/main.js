@@ -10,6 +10,16 @@ function openSearch(evt) {
     li.classList.remove('visibleFull');
     }
   })
+  var x = document.querySelectorAll(".fa");
+  x.forEach((li) => {
+      if (li.classList.contains('fa-angle-down')) {
+          li.classList.add('fa-angle-up');
+          li.classList.remove('fa-angle-down');
+      } else {
+          li.classList.add('fa-angle-down');
+          li.classList.remove('fa-angle-up');
+      }
+  })
 }
 
 function openMenu(evt) {
