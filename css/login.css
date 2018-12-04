@@ -142,7 +142,7 @@ span.psw {
     to {transform: scale(1)}
 }
 
-/* Change styles for span and cancel button on extra small screens */
+/* Change styles for extra small screens */
 @media screen and (max-width: 481px) {
 
     input[type=text], input[type=password] {
