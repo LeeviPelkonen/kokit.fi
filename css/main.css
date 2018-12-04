@@ -83,11 +83,15 @@ h2{
     text-align: center;
     margin: 0 0 0 0;
 }
+.logo {
+    height: 3rem;
+    width: auto;
+}
 #navigation ul{
     display: flex;
     justify-content: space-around;
     list-style-type: none;
-    padding: 1rem;
+    padding: 0.5rem;
     margin: 0 0 0 0;
     width: 100%;
 }
@@ -103,6 +107,7 @@ nav{
 }
 #search ul{
     display: flex;
+    flex-wrap: wrap; 
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -112,7 +117,7 @@ section{
     padding: 1rem;
 }
 main{
-    padding: 1rem;
+    padding: 0 1rem 1rem 1rem;
     box-sizing: border-box;
 }
 article figure{
@@ -129,7 +134,7 @@ footer{
 }
 .advsearch{
     display: block;
-    height: 10px;
+    height: 0px;
     opacity: 1;
     -webkit-transition: height 1s, opacity 1s; /* Safari */
     transition: height 1s, opacity 1s;
@@ -141,7 +146,21 @@ footer{
     -webkit-transition: height 1s, opacity 0.5s; /* Safari */
     transition: height 1s, opacity 0.5s;
 }
-
+.openSearch{
+    width: 100%;
+    text-align: center;
+}
+.search{
+    margin-left:auto;
+    margin-right:0;
+    width: 5rem;
+    text-align: center;
+}
+.searchBar{
+    align-self: flex-start;
+    width: 50%;
+    padding: 0.5rem 1rem;
+}
 .hiddenFull{
     opacity: 0;
     height: 0px;
@@ -157,16 +176,15 @@ footer{
     }
     #navigation li {
         width: 100%;
-        text-align: right;
-        padding-right: 1rem;
+        text-align: left;
     }
     #navigation li:first-child {
         display: flex;
-        max-width: 45%;
+        max-width: 50%;
     }
     #navigation li:nth-child(2) {
         display: flex;
-        max-width:40%;
+        max-width:45%;
         flex-direction:row-reverse;
         padding-right: 1rem;
     }
@@ -183,6 +201,11 @@ footer{
     }
     .clickable{
         display: none;
+    }
+    .searchBar {
+        align-self: flex-start;
+        width: 65%;
+        padding: 0.5rem 1rem;
     }
 }
 
