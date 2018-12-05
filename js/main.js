@@ -51,7 +51,29 @@ addButton.addEventListener("click", (evt) => {
   increaseValue();
 });
 
+const decreaseButton = document.getElementById("decrease");
+decreaseButton.addEventListener("click", (evt) => {
+  console.log(document.getElementById("decrease"));
+  decreaseValue();
+});
+/*
 addButton.addEventListener("mousedown", (evt) => {
   addButton.classList.add("animationbutton");
   console.log(addButton);
 });
+
+decreaseButton.addEventListener("mousedown", (evt) => {
+  decreaseButton.classList.add("animationbutton");
+  console.log(addButton);
+});
+
+addButton.addEventListener("mouseup", (evt) => {
+  addButton.classList.remove("animationbutton");
+  console.log(addButton);
+});
+
+decreaseButton.addEventListener("mouseup", (evt) => {
+  decreaseButton.classList.remove("animationbutton");
+  console.log(addButton);
+});
+*/
