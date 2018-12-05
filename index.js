@@ -3,7 +3,6 @@ require('dotenv').config();
 const express = require('express');
 const db = require('./modules/database');
 const resize = require('./modules/resize');
-const exif = require('./modules/exif');
 
 const bodyParser = require('body-parser');
 
@@ -24,6 +23,12 @@ const cb = (result, res) => {
 
 app.use(express.static('public'));
 
+
+app.use('/conDb', (req,res) => {
+  console.log("COnnecting");
+
+
+});
 // respond to post and save file
 app.post('/upload', upload.single('mediafile'), (req, res, next) => {
   next();
@@ -45,39 +50,30 @@ app.use('/upload', (req, res, next) => {
   });
 });
 
-// get coordinates
-app.use('/upload', (req, res, next) => {
-  exif.getCoordinates(req.file.path).then(coords => {
-    req.coordinates = coords;
-    next();
-  }).catch(() => {
-    console.log('No coordinates');
-    req.coordinates = {};
-    next();
-  });
-});
-
+/*
 // insert to database
 app.use('/upload', (req, res, next) => {
   const data = [
     req.body.category,
     req.body.title,
     req.body.details,
-    req.coordinates,
     req.file.filename + '_thumb',
     req.file.filename + '_medium',
     req.file.filename
   ];
   db.insert(data, connection, next);
 });
-
+*/
 // get updated data form database and send to client
 app.use('/upload', (req, res) => {
   db.select(connection, cb, res);
+
+
 });
 
 app.get('/images', (req, res) => {
   db.select(connection, cb, res);
+
 });
 /*
 app.patch('/images', (req, res) => {
@@ -93,11 +89,12 @@ app.patch('/images', (req, res) => {
   });
 });
 */
+/*
 app.delete('/images', (req, res) => {
   const item = [req.body.mID];
   db.deleteImage(item, connection);
 });
-
+*/
 app.get('/search', (req, res) => {
   db.searchTitle([req.query.title], connection).then((result) => {
     res.send(result);

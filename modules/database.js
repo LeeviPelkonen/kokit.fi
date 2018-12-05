@@ -15,16 +15,17 @@ const connect = () => {
 const select = (connection, callback, res) => {
   // simple query
   connection.query(
-      'SELECT * FROM kokit',
+      'SELECT * FROM users;',
       (err, results, fields) => {
         // console.log(results); // results contains rows returned by server
         // console.log(fields); // fields contains extra meta data about results, if available
         console.log(err);
+        console.log(results);
         callback(results, res);
       },
   );
 };
-
+/*
 const insert = (data, connection, callback) => {
   // simple query
   connection.execute(
@@ -69,12 +70,13 @@ const searchTitle = (title, connection) => {
     )
   })
 };
+*/
 
 module.exports = {
   connect: connect,
   select: select,
-  insert: insert,
-  update: update,
-  deleteImage: deleteImage,
-  searchTitle: searchTitle,
+  //insert: insert,
+  //update: update,
+  //deleteImage: deleteImage,
+  //searchTitle: searchTitle,
 };
