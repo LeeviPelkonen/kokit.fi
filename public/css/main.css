@@ -274,7 +274,7 @@ button:hover {
 .cancelbtn {
      width: auto;
      padding: 0.4rem 0.8rem;
-     background-color: #f44336;
+     background-color: olive;
      color: white;
      margin: 0.3rem 0;
      border: none;
@@ -389,6 +389,7 @@ span.psw {
     }
     .cancelbtn {
         width: 100%;
+        background-color: seagreen;
     }
     .closebtn {
         width: 100%;
