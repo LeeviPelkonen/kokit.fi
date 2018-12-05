@@ -1,6 +1,6 @@
 'use strict';
 //const testform = document.querySelector('#testform');
-const but = document.querySelector('#submitB');
+//const but = document.querySelector('#submitB');
 
 
 
@@ -129,7 +129,7 @@ window.onclick = event => {
 document.getElementById('burger').addEventListener('click',openMenu);
 document.getElementById('openSearchButton').addEventListener('click',openSearch);
 
-
+/*
 
 but.addEventListener('click', (e) => {
   console.log("click");
@@ -141,7 +141,7 @@ but.addEventListener('click', (e) => {
     }
   });
 });
-
+*/
 
 
 //testform.addEventListener('submit', testFunc);
