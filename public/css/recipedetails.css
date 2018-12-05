@@ -1,0 +1,361 @@
+.recipecontainer {
+    border: black;
+    border-style: solid;
+    border-width: 2px 2px 2px 2px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.foodtitle {
+    width: 100%;
+    font-size: 3rem;
+    padding: 1rem;
+    margin: 0;
+}
+
+.recipedetails {
+    width: 50%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 0;
+}
+
+.userinfo {
+    border: black;
+    border-style: solid;
+    border-width: 2px 2px 2px 2px;
+    width: 35%;
+    margin: 0;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    background-color: antiquewhite;
+}
+
+
+.recipeimage {
+    width: 100%;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 0;
+}
+
+.recipeimage > img {
+    width: 100%;
+
+}
+
+.recipetitle {
+    width: 100%;
+    padding-left: 1rem;
+    text-decoration: underline;
+    font-size: 2rem;
+}
+
+.ingredientlist {
+    margin: 0;
+    padding-left: 2rem;
+    list-style: none;
+    width: 100%
+}
+
+.doseclicker {
+    width: 70%;
+    margin: 0;
+    padding-top: 0.5rem;
+}
+
+form {
+    width: 25%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.valuebutton {
+    width: 3rem;
+    height: 3rem;
+    padding-top: 2rem;
+}
+
+
+/*
+.valuebutton {
+    background-color: coral;
+    color: black;
+    font-size: 25px;
+}
+*/
+
+.valuebutton {
+    padding: 0.2rem 0.2rem 0.2rem 0.2rem;
+    margin: 0;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 9px #999;
+}
+
+.valuebutton:hover {background-color: #3e8e41}
+
+.valuebutton:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+form #decrease {
+    margin-right: -4px;
+    border-radius: 8px 0 0 8px;
+}
+
+form #increase {
+    margin-left: -4px;
+    border-radius: 0 8px 8px 0;
+}
+
+form #input-wrap {
+    margin: 0px;
+    padding: 0px;
+}
+
+input#number {
+    text-align: center;
+    border: none;
+    margin: 0px;
+    width: 2rem;
+    height: 2rem;
+    padding-top: 2rem;
+}
+
+#recipefigure {
+    width: 50%;
+    padding: 0;
+    margin: 0;
+}
+
+.instructions {
+    width: 45%;
+    margin: 0;
+    padding-top: 2rem;
+}
+
+
+
+/*värit*/
+.black-b{
+    background-color:#0000;
+}
+.black-t{
+    color:#0000;
+}
+.white-b{
+    background-color:#000000;
+}
+.white-t{
+    color:#000000;
+}
+.beige-b{
+    background-color: rgb(255, 255, 255);
+}
+.beige-t{
+    color: rgb(255, 255, 255);
+}
+.light-b{
+    background-color: rgba(255, 255, 255,0.9);
+}
+.light-t{
+    color: rgb(255, 255, 255);
+}
+.grey-b{
+    background-color: rgba(255, 255, 255,0.9);
+}
+.grey-t{
+    color: rgb(255, 255, 255);
+}
+.red-b{
+    background-color: rgb(80, 189, 32);
+}
+.red-t{
+    color: rgb(80, 189, 32);
+}
+/*------------------------------------------------*/
+html{
+    scroll-behavior: smooth;
+}
+.button{
+    padding: 0 1rem 0 1rem;
+    line-height: 3rem;
+    display: block;
+}
+.button:hover{
+    background-color:rgb(112, 220, 66);
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "mako", sans-serif;
+    background-image: url("../img/pizza-2068272_1920edit.png");
+    background-attachment: fixed;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+#container{
+    position: relative;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+header {
+    width: 100%;
+    margin: 2rem 0 0 0;
+    position: sticky;
+    top: 0;
+}
+h1{
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 3rem;
+    margin: 0 0 0 0;
+    font-family: "fredericka the great";
+}
+h2{
+    text-align: center;
+    margin: 0 0 0 0;
+}
+.logo {
+    height: 3rem;
+    width: auto;
+}
+#navigation ul{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0.5rem;
+    margin: 0 0 0 0;
+    width: 100%;
+}
+#navigation li:nth-child(2) {
+    display: none;
+}
+#advsearch {
+    display: none;
+}
+nav{
+    width: 100%;
+    font-weight: 600;
+}
+#search ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+section{
+    width: 18rem;
+    padding: 1rem;
+}
+main{
+    padding: 0 1rem 1rem 1rem;
+    box-sizing: border-box;
+}
+article figure{
+    float: left;
+    margin: 0 1rem 0 0;
+    text-align: center;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+footer{
+    width: 100%;
+}
+.advsearch{
+    display: block;
+    height: 0px;
+    opacity: 1;
+    -webkit-transition: height 1s, opacity 1s; /* Safari */
+    transition: height 1s, opacity 1s;
+}
+.advnav{
+    display: block;
+    height: 0px;
+    opacity: 1;
+    -webkit-transition: height 1s, opacity 0.5s; /* Safari */
+    transition: height 1s, opacity 0.5s;
+}
+.openSearch{
+    width: 100%;
+    text-align: center;
+}
+.search{
+    margin-left:auto;
+    margin-right:0;
+    width: 5rem;
+    text-align: center;
+}
+.searchBar{
+    align-self: flex-start;
+    width: 50%;
+    padding: 0.5rem 1rem;
+}
+.hiddenFull{
+    opacity: 0;
+    height: 0px;
+}
+.visibleFull{
+    height: 300px;
+}
+@media screen and (max-width: 650px) {
+
+    #navigation ul{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #navigation li {
+        width: 100%;
+        text-align: left;
+    }
+    #navigation li:first-child {
+        display: flex;
+        max-width: 50%;
+    }
+    #navigation li:nth-child(2) {
+        display: flex;
+        max-width:45%;
+        flex-direction:row-reverse;
+        padding-right: 1rem;
+    }
+    .hidden {
+        opacity: 0;
+        height: 0px;
+        pointer-events: none;
+    }
+    .hidden a{
+        pointer-events: inherit;
+    }
+    .visible{
+        height: 50px;
+    }
+    .clickable{
+        display: none;
+    }
+    .searchBar {
+        align-self: flex-start;
+        width: 65%;
+        padding: 0.5rem 1rem;
+    }
+}
+
+
+
