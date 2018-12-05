@@ -406,7 +406,8 @@ span.psw {
     }
 
     .lcontainer {
-        padding: 15px;
+        padding: 1rem;
+        border-radius: 40%;
     }
 
     .signup {
@@ -439,7 +440,7 @@ span.psw {
         border: 0.01rem solid #888;
         width: 90%; /* Could be more or less, depending on screen size */
         position: relative;
-
+        border-radius: 10%;
     }
 }
 

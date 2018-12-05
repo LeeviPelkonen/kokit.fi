@@ -15,7 +15,7 @@ const connect = () => {
 const select = (connection, callback, res) => {
   // simple query
   connection.query(
-      'SELECT * FROM kokit',
+      'SELECT * FROM users',
       (err, results, fields) => {
         // console.log(results); // results contains rows returned by server
         // console.log(fields); // fields contains extra meta data about results, if available
