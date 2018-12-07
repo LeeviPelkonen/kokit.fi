@@ -39,7 +39,7 @@ const getImage = () => {
         uID: json[0].rUSERID,
       }),
   };
-    fetch('nodekek/images', settingsUser).then((response) => {
+    fetch('/nodekek/images', settingsUser).then((response) => {
       return response.json();
     }).then((json) => {
       console.log(json[0]);
