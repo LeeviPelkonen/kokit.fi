@@ -7,10 +7,10 @@ const modal1 = document.getElementById('id01');
 
 const frm = document.querySelector('#mediaform');
 
-const login = document.getElementById('login');
-const logbutton = document.getElementById('logbutton');
-const cancelbtn = document.getElementById('cancelbtn');
-const closebtn = document.getElementById('closebtn');
+//const login = document.getElementById('login');
+//const logbutton = document.getElementById('logbutton');
+//const cancelbtn = document.getElementById('cancelbtn');
+//const closebtn = document.getElementById('closebtn');
 
 const burger = document.getElementById('burger');
 const opensearch = document.getElementById('openSearchButton');
@@ -103,12 +103,12 @@ function exit() {
 }
 
 
-
+/*
 login.addEventListener("click", close);
 logbutton.addEventListener("click", show);
 cancelbtn.addEventListener("click", reg);
 closebtn.addEventListener("click", exit);
-
+*/
 opensearch.addEventListener('click', openSearch);
 burger.addEventListener('click', openMenu);
 frm.addEventListener('submit', sendForm);
