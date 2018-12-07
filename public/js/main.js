@@ -2,8 +2,8 @@
 //const testform = document.querySelector('#testform');
 //const but = document.querySelector('#submitB');
 // Get the modal
-const modal2 = document.getElementById('id02');
-const modal1 = document.getElementById('id01');
+//const modal2 = document.getElementById('id02');
+//const modal1 = document.getElementById('id01');
 
 const frm = document.querySelector('#mediaform');
 
@@ -84,7 +84,7 @@ function openMenu(evt) {
     }
   })
 }
-
+/*
 function show() {
   document.getElementById('id01').style.display="block";
 }
@@ -103,7 +103,7 @@ function exit() {
 }
 
 
-/*
+
 login.addEventListener("click", close);
 logbutton.addEventListener("click", show);
 cancelbtn.addEventListener("click", reg);
@@ -113,7 +113,7 @@ opensearch.addEventListener('click', openSearch);
 burger.addEventListener('click', openMenu);
 frm.addEventListener('submit', sendForm);
 
-
+/*
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = event => {
   if (event.target === modal2 || event.target === modal1) {
@@ -121,7 +121,7 @@ window.onclick = event => {
     modal1.style.display = "none";
   }
 };
-/*
+
 
 but.addEventListener('click', (e) => {
   console.log("click");
