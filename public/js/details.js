@@ -34,7 +34,7 @@ const getImage = () => {
     console.log(json[0]);
     image.src = './uploads/' + json[0].rPICTURE;
     const settingsUser = {
-    method: 'get',
+    method: 'post',
       body: JSON.stringify({
         uID: json[0].rUSERID,
       }),
