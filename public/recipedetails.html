@@ -1,56 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<HTML>
 <head>
-    <meta charset="UTF-8">
+    <title>kokit.fi </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Mako" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="font/stylesheet.css" rel="sylesheet">
     <link href="css/recipedetails.css" rel="stylesheet">
-
-    <title>Title</title>
 </head>
+<body class="beige-b">
+<div id="container">
+    <header>
 
-<body>
-<header>
-    <nav id="navigation" class="red-b">
+        <nav id="navigation" class="red-b">
+            <ul>
+                <li>
+                    <img src="img/kokitlogopieni60.png" class="button logo" alt="kokit.fi">
+                </li>
+                <li>
+                    <button class="logbutton fa fa-user"  style="font-size: 2rem" id="logbutton"></button>
+                </li>
+                <li>
+                    <a href="#" id="burger" class="button">&#9776;</a>
+                </li>
+
+                <li class = "advnav hidden">
+                    <a href="recipedetails.html" class="button">Search recipes</a>
+                </li>
+                <li class = "advnav hidden">
+                    <a href="characters.html" class="button">Most popular</a>
+                </li>
+                <li class = "advnav hidden">
+                    <a href="download.html" class="button">Quick recipes</a>
+                </li>
+                <li class = "advnav hidden">
+
+                    <a href="fine.html" class="button">Fine dining recipes</a>
+                </li>
+            </ul>
+        </nav>
+        <nav id="search" class="light-b">
+            <ul>
+                <li class ="searchBar">
+                    <input type="text" class="searchBar"name="search">
+                </li>
+                <li class = "search">
+                    <a href="#" class="button">search</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <nav id="search" class="light-b">
         <ul>
-            <li>
-                <img src="img/kokitlogopieni60.png" class="button logo" alt="kokit.fi">
+            <li class="openSearch">
+                <a href="#" id="openSearchButton" class="button fa fa-angle-down"></a>
             </li>
-            <li>
-                <a href="#" id="burger" class="button">&#9776;</a>
-            </li>
-            <li class = "advnav hidden">
-                <a href="story.html" class="button">Search recipes</a>
-            </li>
-            <li class = "advnav hidden">
-                <a href="characters.html" class="button">Most popular</a>
-            </li>
-            <li class = "advnav hidden">
-                <a href="download.html" class="button">Quick recipes</a>
-            </li>
-            <li class = "advnav hidden">
-                <a href="fine.html" class="button">Fine dining recipes</a>
+            <li class="hiddenFull advsearch">
+                Food is any substance[1] consumed to provide nutritional support for an organism. It is usually of plant or animal origin, and contains essential nutrients, such as carbohydrates, fats, proteins, vitamins, or minerals. The substance is ingested by an organism and assimilated by the organism's cells to provide energy, maintain life, or stimulate growth.
+                Historically, humans secured food through two methods: hunting and gathering and agriculture. Today, the majority of the food energy required by the ever increasing population of the world is supplied by the food industry.
+                Food safety and food security are monitored by agencies like the International Association for Food Protection, World Resources Institute, World Food Programme, Food and Agriculture Organization, and International Food Information Council. They address issues such as sustainability, biological diversity, climate change, nutritional economics, population growth, water supply, and access to food.
+                The right to food is a human right derived from the International Covenant on Economic, Social and Cultural Rights (ICESCR), recognizing the "right to an adequate standard of living, including adequate food", as well as the "fundamental right to be free from
             </li>
         </ul>
     </nav>
-</header>
-<nav id="search" class="light-b">
-    <ul>
-        <li class ="searchBar">
-            <input type="text" class="searchBar"name="search">
-        </li>
-        <li class = "search">
-            <a href="#" class="button">search</a>
-        </li>
-        <li class = "openSearch">
-            <a href="#" id="openSearch" class="button">advanced search</a>
-        </li>
-        <li class ="hiddenFull advsearch">
-            Food is any substance[1] consumed to provide nutritional support for an organism. It is usually of plant or animal origin, and contains essential nutrients, such as carbohydrates, fats, proteins, vitamins, or minerals. The substance is ingested by an organism and assimilated by the organism's cells to provide energy, maintain life, or stimulate growth.
-            Historically, humans secured food through two methods: hunting and gathering and agriculture. Today, the majority of the food energy required by the ever increasing population of the world is supplied by the food industry.
-            Food safety and food security are monitored by agencies like the International Association for Food Protection, World Resources Institute, World Food Programme, Food and Agriculture Organization, and International Food Information Council. They address issues such as sustainability, biological diversity, climate change, nutritional economics, population growth, water supply, and access to food.
-            The right to food is a human right derived from the International Covenant on Economic, Social and Cultural Rights (ICESCR), recognizing the "right to an adequate standard of living, including adequate food", as well as the "fundamental right to be free from
-        </li>
-    </ul>
-</nav>
 <article class="recipecontainer">
     <h1 class="foodtitle">Hamburger</h1>
     <figure class="recipeimage">
@@ -84,7 +98,53 @@
     <p class="instructions">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like</p>
 </article>
 
+    <div id="id01" class="modal">
+        <form class="modal-content animate" action="/action_page.php">
+            <form id="loginform" class="modal-content animate" action="/action_page.php">
+                <div class="imgcontainer">
+                    <img src="img/Missing_avatar.png" alt="Avatar" class="avatar">
+                    <span class="close" title="Close modal" id="login"></span>
+                </div>
 
+                <div class="lcontainer">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter username" name="uname" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter password" name="psw" required>
+
+                    <button class="loginbutton" type="submit">Login</button>
+
+                    <button type="button" class="cancelbtn" id="cancelbtn">Register here</button>
+                    <span class="psw">Forgot your password? <a href="#">Click here</a></span>
+                </div>
+            </form>
+    </div>
+    <div id=id02 class="modal">
+        <form class="modal-content animate" action="/action_page.php">
+            <div class="lcontainer">
+                <h1>Register</h1>
+                <p>Please fill this form to create an account</p>
+                <hr>
+                <label for="uname">Username</label>
+                <input type="text" placeholder="Enter username" name="uname" required>
+
+                <label for="email">Email</label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label for="pswr">Password</label>
+                <input type="password" placeholder="Enter password" name="pswr" required>
+
+                <label for="psw-repeat"></label>
+                <input type="password" placeholder="Repeat password" name="psw-repeat" required>
+
+                <div class="clearfix">
+                    <button type="submit" class="signup">Sign Up</button>
+                    <button type="button" class="closebtn" id="closebtn">Cancel</button>
+                </div>
+            </div>
+        </form>
+    </div>
 
 <script src="js/main.js"></script>
 <script src="js/details.js"></script>

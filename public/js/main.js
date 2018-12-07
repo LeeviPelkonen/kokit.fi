@@ -4,10 +4,12 @@
 // Get the modal
 const modal2 = document.getElementById('id02');
 const modal1 = document.getElementById('id01');
+
 const login = document.getElementById('login');
 const logbutton = document.getElementById('logbutton');
 const cancelbtn = document.getElementById('cancelbtn');
 const closebtn = document.getElementById('closebtn');
+
 const burger = document.getElementById('burger');
 const opensearch = document.getElementById('openSearchButton');
 
@@ -89,6 +91,7 @@ login.addEventListener("click", close);
 logbutton.addEventListener("click", show);
 cancelbtn.addEventListener("click", reg);
 closebtn.addEventListener("click", exit);
+
 opensearch.addEventListener('click', openSearch);
 burger.addEventListener('click', openMenu);
 
