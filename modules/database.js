@@ -29,7 +29,7 @@ const select = (connection, callback, res) => {
 const insert = (data, connection, callback) => {
   // simple query
   connection.execute(
-      'INSERT INTO recipes (rID, rUSERID, rNAME, rINGREDIENTS, rPICTURE, rTHUMBNAIL, rMEDIUM , rPREPTIME) VALUES (?, ?, ?, ?, ?, ?, ?, ?);',
+      'INSERT INTO recipe (rID, rUSERID, rNAME, rINGREDIENTS, rPICTURE, rTHUMBNAIL, rMEDIUM , rPREPTIME) VALUES (?, ?, ?, ?, ?, ?, ?, ?);',
       data,
       (err, results, fields) => {
         // console.log(results); // results contains rows returned by server
