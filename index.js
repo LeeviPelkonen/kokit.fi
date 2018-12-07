@@ -73,6 +73,12 @@ app.use('/upload', (req, res) => {
 app.get('/images', (req, res) => {
 	db.selectRecipe(connection, cb, res);
 });
+
+app.get('images', (req, res) => {
+  const item = [req.body.UserID];
+  db.selectUser(item, connection, cb, res);
+});
+
 /*
 app.patch('/images', (req, res) => {
 	const data = [

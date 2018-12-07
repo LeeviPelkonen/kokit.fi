@@ -3,6 +3,7 @@
 const increase = document.getElementById("increase");
 const decrease =document.getElementById("decrease");
 const image = document.getElementById("foodimage");
+const userName = document.getElementById("username");
 
 function increaseValue() {
   console.log('working');
@@ -32,6 +33,19 @@ const getImage = () => {
   }).then((json) => {
     console.log(json[0]);
     image.src = './uploads/' + json[0].rPICTURE;
+    const settingsUser = {
+    method: 'get',
+      body: JSON.stringify({
+        uID: json[0].rUSERID,
+      }),
+  };
+    fetch('nodekek/images', settingsUser).then((response) => {
+      return response.json();
+    }).then((json) => {
+      console.log(json[0]);
+      userName.innerText = json[0].uFNAME;
+    })
+
   });
 };
 

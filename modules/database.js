@@ -37,6 +37,17 @@ const selectRecipe = (connection, callback, res) => {
   );
 };
 
+const selectUser = (item, connection, callback, res) => {
+  connection.query(
+      'SELECT * FROM users WHERE uID = ' +item+ ';',
+      (err, results, fields) => {
+        console.log(err);
+        console.log(results);
+        callback(results, res);
+      },
+  );
+};
+
 const insert = (data, connection, callback) => {
   // simple query
   connection.execute(
@@ -87,6 +98,7 @@ module.exports = {
   connect: connect,
   select: select,
   selectRecipe: selectRecipe,
+  selectUser: selectUser,
   insert: insert,
   //update: update,
   //deleteImage: deleteImage,
