@@ -25,7 +25,7 @@ function decreaseValue() {
 const getImage = () => {
   const fd = new FormData(frm);
   const settings = {
-    method: 'post',
+    method: 'get',
     body: fd,
   };
 
