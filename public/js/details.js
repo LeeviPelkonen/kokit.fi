@@ -31,7 +31,7 @@ const getImage = () => {
     return response.json();
   }).then((json) => {
     console.log(json);
-    image.src = json.rPICTURE;
+    image.src = './uploads/' + json.rPICTURE;
   });
 };
 
