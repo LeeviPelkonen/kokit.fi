@@ -44,7 +44,7 @@ const selectUser = (connection, data, callback) => {
       (err, results, fields) => {
         console.log(err);
         console.log(results);
-        callback(results, res);
+        callback(results);
       },
   );
 };
