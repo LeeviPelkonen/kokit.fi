@@ -50,13 +50,17 @@ app.use('/upload', (req, res, next) => {
 
 app.use('/upload', (req, res, next) => {
 	const data = [
-		req.body.category,
-		req,body.title,
-		req.body.details,
-		req.coordinates,
+		//req.body.rID,
+		//req.body.rUSERID,
+      1,
+      1,
+		req.body.Name,
+    req.body.Ingredients,
+    req.file.filename,
 		req.file.filename + '_thumb',
 		req.file.filename + '_medium',
-		req.file.filename
+    req.body.PreparationTime
+
 		];
 	db.insert(data, connection, next);
 });

@@ -25,11 +25,11 @@ const select = (connection, callback, res) => {
       },
   );
 };
-/*
+
 const insert = (data, connection, callback) => {
   // simple query
   connection.execute(
-      'INSERT INTO kokit (category, title, details, coordinates, thumbnail, image, original) VALUES (?, ?, ?, ?, ?, ?, ?);',
+      'INSERT INTO recipes (rID, rUSERID, rNAME, rINGREDIENTS, rPICTURE, rTHUMBNAIL, rMEDIUM , rPREPTIME) VALUES (?, ?, ?, ?, ?, ?, ?, ?);',
       data,
       (err, results, fields) => {
         // console.log(results); // results contains rows returned by server
@@ -39,7 +39,7 @@ const insert = (data, connection, callback) => {
       },
   );
 };
-
+/*
 const update = (data, connection) => {
   return new Promise((resolve, reject) => {
     connection.execute(
@@ -75,7 +75,7 @@ const searchTitle = (title, connection) => {
 module.exports = {
   connect: connect,
   select: select,
-  //insert: insert,
+  insert: insert,
   //update: update,
   //deleteImage: deleteImage,
   //searchTitle: searchTitle,

@@ -5,6 +5,8 @@
 const modal2 = document.getElementById('id02');
 const modal1 = document.getElementById('id01');
 
+const frm = document.querySelector('#mediaform');
+
 const login = document.getElementById('login');
 const logbutton = document.getElementById('logbutton');
 const cancelbtn = document.getElementById('cancelbtn');
@@ -12,6 +14,21 @@ const closebtn = document.getElementById('closebtn');
 
 const burger = document.getElementById('burger');
 const opensearch = document.getElementById('openSearchButton');
+
+const sendForm = (evt) => {
+  evt.preventDefault();
+  const fd = new FormData(frm);
+  const settings = {
+    method: 'post',
+    body: fd,
+  };
+
+  fetch('/upload', settings).then((response) => {
+    return response.json();
+  }).then((json) => {
+    console.log(json);
+  });
+};
 
 
 /*const testFunc = (evt) => {
@@ -94,6 +111,7 @@ closebtn.addEventListener("click", exit);
 
 opensearch.addEventListener('click', openSearch);
 burger.addEventListener('click', openMenu);
+frm.addEventListener('submit', sendForm);
 
 
 // When the user clicks anywhere outside of the modal, close it
