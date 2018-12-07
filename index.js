@@ -51,9 +51,7 @@ app.use('/upload', (req, res, next) => {
 app.use('/upload', (req, res, next) => {
 	const data = [
 		//req.body.rID,
-		//req.body.rUSERID,
-      500,
-      500,
+		req.body.UserID,
 		req.body.Name,
     req.body.Ingredients,
     req.file.filename,
