@@ -32,8 +32,9 @@ const selectRecipe = (connection, callback, res) => {
       (err, results, fields) => {
         console.log(err);
         console.log(results);
-      }
-  )
+        callback(results, res);
+      },
+  );
 };
 
 const insert = (data, connection, callback) => {
