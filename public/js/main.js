@@ -123,16 +123,6 @@ window.onclick = event => {
 };
 
 
-but.addEventListener('click', (e) => {
-  console.log("click");
-  document.querySelector('#testtextt').innerHTML = "Working";
-  fetch('/conDb', {method: 'POST'})
-  .then((response) =>{
-    if(response.ok){
-      return;
-    }
-  });
-});
 
 
 
