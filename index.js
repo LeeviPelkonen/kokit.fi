@@ -31,6 +31,7 @@ const cb = (result, res) => {
 app.use(express.static('public'));
 
 app.post('/upload', upload.single('mediafile'), (req, res, next) => {
+  console.log(req.query);
 	next();
 });
 
