@@ -24,7 +24,7 @@ function decreaseValue() {
 
 const getImage = () => {
   const settings = {
-    method: 'patch',
+    method: 'get',
   };
 
   fetch('/nodekek/images', settings).then((response) => {

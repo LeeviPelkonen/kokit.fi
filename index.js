@@ -70,7 +70,7 @@ app.use('/upload', (req, res) => {
 	db.select(connection, cb, res);
 });
 
-app.patch('/images', (req, res) => {
+app.get('/images', (req, res) => {
 	db.selectRecipe(connection, cb, res);
 });
 /*
