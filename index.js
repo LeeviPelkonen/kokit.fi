@@ -74,8 +74,8 @@ app.get('/images', (req, res) => {
 	db.selectRecipe(connection, cb, res);
 });
 
-app.get('images', (req, res) => {
-  const item = [req.body.UserID];
+app.patch('images', (req, res) => {
+  const item = [req.body.uID];
   db.selectUser(item, connection, cb, res);
 });
 
