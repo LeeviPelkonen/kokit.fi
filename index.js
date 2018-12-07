@@ -30,7 +30,7 @@ const cb = (result, res) => {
 
 app.use(express.static('public'));
 console.log("/upload happens now");
-app.post('/nodekek/upload', upload.single('mediafile'), (req, res, next) => {
+app.post('/upload', upload.single('mediafile'), (req, res, next) => {
   console.log("req.query", req.query);
 	next();
 });

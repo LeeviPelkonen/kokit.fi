@@ -23,7 +23,7 @@ const sendForm = (evt) => {
     body: fd,
   };
 
-  fetch('/nodekek/upload', settings).then((response) => {
+  fetch('/upload', settings).then((response) => {
     return response.json();
   }).then((json) => {
     console.log(json);
