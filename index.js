@@ -14,7 +14,7 @@ const resize = require('./modules/resize');
 const bodyParser = require('body-parser');
 
 const multer = require('multer');
-const upload = multer({dest: 'public/uploads/'});
+const upload = multer({dest: './public/uploads/'});
 
 const app = express();
 
@@ -38,14 +38,14 @@ app.post('/upload', upload.single('mediafile'), (req, res, next) => {
 
 app.use('/upload', (req, res, next) => {
 	resize.doResize(req.file.path, 300,
-		'public/thumbnails/' + req.file.filename + '_thumb').then(() => {
+		'./public/thumbnails/' + req.file.filename + '_thumb').then(() => {
 		next();
 	});
 });
 
 app.use('/upload', (req, res, next) => {
 	resize.doResize(req.file.path, 640,
-		'public/medium/' + req.file.filename + '_medium').then(() => {
+		'./public/medium/' + req.file.filename + '_medium').then(() => {
 		next();
 	});
 });
