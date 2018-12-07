@@ -23,10 +23,8 @@ function decreaseValue() {
 }
 
 const getImage = () => {
-  const fd = new FormData(frm);
   const settings = {
-    method: 'get',
-    body: fd,
+    method: 'patch',
   };
 
   fetch('/nodekek/images', settings).then((response) => {
