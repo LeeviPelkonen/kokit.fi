@@ -29,9 +29,9 @@ const cb = (result, res) => {
 };
 
 app.use(express.static('public'));
-
+console.log("/upload happens now");
 app.post('/upload', upload.single('mediafile'), (req, res, next) => {
-  console.log(req.query);
+  console.log("req.query", req.query);
 	next();
 });
 
@@ -111,5 +111,6 @@ http.createServer((req, res) => {
 	res.writeHead(301, { 'Location': 'https://' + req.headers.host + '/nodekek' + req.url });
 		res.end();
 		}).listen(8000);
+    console.log("listening port: 3000");
 		https.createServer(options, app).listen(3000);
 		
