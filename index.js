@@ -29,8 +29,9 @@ const cb = (result, res) => {
 };
 
 app.use(express.static('public'));
-console.log("/upload happens now");
+
 app.post('/upload', upload.single('mediafile'), (req, res, next) => {
+  console.log("/upload happens now");
   console.log("req.query", req.query);
 	next();
 });
@@ -50,6 +51,7 @@ app.use('/upload', (req, res, next) => {
 });
 
 app.use('/upload', (req, res, next) => {
+  console.log(req.body);
 	const data = [
 		//req.body.rID,
 		req.body.UserID,
