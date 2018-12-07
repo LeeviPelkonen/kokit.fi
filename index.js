@@ -71,9 +71,9 @@ app.use('/upload', (req, res) => {
 });
 
 app.get('/images', (req, res) => {
-	db.select(connection, cb, res);
+	db.selectRecipe(connection, cb, res);
 });
-
+/*
 app.patch('/images', (req, res) => {
 	const data = [
 		req.body.category,
@@ -91,7 +91,7 @@ app.delete('/images', (req, res) => {
 	const item = [req.body.mID];
 	db.deleteImage(item, connection);
 });
-
+*/
 app.get('/search', (req, res) => {
 	db.searchTitle([req.query.title], connection).then((result) => {
 		res.send(result);

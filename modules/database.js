@@ -26,6 +26,16 @@ const select = (connection, callback, res) => {
   );
 };
 
+const selectRecipe = (connection, callback, res) => {
+  connection.query(
+      'SELECT * FROM recipe WHERE rID == 1;',
+      (err, results, fields) => {
+        console.log(err);
+        console.log(results);
+      }
+  )
+};
+
 const insert = (data, connection, callback) => {
   // simple query
   connection.execute(
@@ -75,6 +85,7 @@ const searchTitle = (title, connection) => {
 module.exports = {
   connect: connect,
   select: select,
+  selectRecipe: selectRecipe,
   insert: insert,
   //update: update,
   //deleteImage: deleteImage,
