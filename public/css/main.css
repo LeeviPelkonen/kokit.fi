@@ -95,9 +95,7 @@ h2{
     margin: 0 0 0 0;
     width: 100%;
 }
-
 #navigation li:nth-child(3) {
-
     display: none;
 }
 #advsearch {
@@ -170,6 +168,9 @@ footer{
 .visibleFull{
     height: 300px;
 }
+#mediaform{
+    z-index: 9999;
+}
 
 @media screen and (max-width: 481px) {
     
@@ -183,11 +184,18 @@ footer{
     }
     #navigation li:first-child {
         display: flex;
-        max-width: 50%;
+        max-width: 60%;
     }
     #navigation li:nth-child(2) {
         display: flex;
-        max-width:45%;
+        max-width: 15%;
+        flex-direction:row-reverse;
+        padding-left: 1rem;
+        height: 3rem;
+    }
+    #navigation li:nth-child(3) {
+        display: flex;
+        max-width:15%;
         flex-direction:row-reverse;
         padding-right: 1rem;
     }
@@ -214,7 +222,7 @@ footer{
 }
 
 /* Bordered form */
-form {
+form#loginform {
     border: 1rem solid #f1f1f1;
 }
 
@@ -222,7 +230,7 @@ form {
 input[type=text], input[type=password] {
     width: 100%;
     padding: 0.5rem 1rem;
-    margin: 8px 0;
+    margin: 0.5rem 0;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
@@ -232,19 +240,18 @@ input[type=text], input[type=password] {
 .logbutton {
     background-color: #4CAF50;
     color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
+    padding: 0.5rem;
+    margin: 0;
     border: none;
     cursor: pointer;
-    width: 5%;
-    float: right;
+    width: 100%;
 }
 
 .loginbutton {
     background-color: #4CAF50;
     color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
+    padding: 0.5rem 1rem;
+    margin: 0.3rem 0;
     border: none;
     cursor: pointer;
     width: 100%;
@@ -253,8 +260,8 @@ input[type=text], input[type=password] {
 .signup {
     background-color: #4CAF50;
     color: white;
-    padding: 10px 18px;
-    margin: 8px 0;
+    padding: 0.4rem 0.8rem;
+    margin: 0.3rem 0;
     border: none;
     cursor: pointer;
     width: 15%;
@@ -269,20 +276,20 @@ button:hover {
 /* Extra style for the cancel button (red) */
 .cancelbtn {
      width: auto;
-     padding: 10px 18px;
-     background-color: #f44336;
+     padding: 0.4rem 0.8rem;
+     background-color: olive;
      color: white;
-     margin: 8px 0;
+     margin: 0.3rem 0;
      border: none;
      cursor: pointer;
  }
 
  .closebtn {
     width: auto;
-    padding: 10px 18px;
+    padding: 0.3rem 0.8rem;
     background-color: #f44336;
     color: white;
-    margin: 8px 0;
+    margin: 0.3rem 0;
     border: none;
     cursor: pointer;
 }
@@ -290,7 +297,7 @@ button:hover {
 /* Center the avatar image inside this container */
 .imgcontainer {
     text-align: center;
-    margin: 24px 0 12px 0;
+    margin: 1.3rem 0 0.1rem 0;
 }
 
 /* Avatar image */
@@ -301,7 +308,7 @@ img.avatar {
 
 /* Add padding to containers */
 .lcontainer {
-    padding: 16px;
+    padding: 0.6rem;
 }
 
 /* The "Forgot password" text */
@@ -321,14 +328,14 @@ span.psw {
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    padding-top: 60px;
+    padding-top: 3rem;
 }
 
 /* Modal Content/Box */
 .modal-content {
     background-color: #fefefe;
-    margin: 5px auto; /* 15% from the top and centered */
-    border: 1px solid #888;
+    margin: 0.2rem auto; /* 15% from the top and centered */
+    border: 0.01rem solid #888;
     width: 33%; /* Could be more or less, depending on screen size */
     position: relative;
 }
@@ -337,10 +344,10 @@ span.psw {
 .close {
     /* Position it in the top right corner outside of the modal */
     position: absolute;
-    right: 10px;
+    right: 0.5rem;
     top: 0;
     color: #000;
-    font-size: 35px;
+    font-size: 1.4rem;
     font-weight: bold;
 }
 
@@ -372,7 +379,7 @@ span.psw {
 
     input[type=text], input[type=password] {
         width: 100%;
-        padding: 10px 18px;
+        padding: 0.3rem 0.8rem;
         margin: 8px 0;
         display: inline-block;
         border: 1px solid #ccc;
@@ -385,6 +392,7 @@ span.psw {
     }
     .cancelbtn {
         width: 100%;
+        background-color: seagreen;
     }
     .closebtn {
         width: 100%;
@@ -393,24 +401,24 @@ span.psw {
     .logbutton {
         background-color: #4CAF50;
         color: white;
-        padding: 14px 20px;
-        margin: 8px 0;
+        padding: 0;
+        margin: 0;
         border: none;
         cursor: pointer;
-        width: 15%;
-        float: right;
-        font-size: 18px;
+        width: 100%;
+        font-size: 2rem;
     }
 
     .lcontainer {
-        padding: 15px;
+        padding: 1rem;
+        border-radius: 40%;
     }
 
     .signup {
         background-color: #4CAF50;
         color: white;
-        padding: 10px 18px;
-        margin: 8px 0;
+        padding: 0.3rem 0.8rem;
+        margin: 0.2rem 0;
         border: none;
         cursor: pointer;
         width: 100%;
@@ -432,11 +440,11 @@ span.psw {
 
     .modal-content {
         background-color: #fefefe;
-        margin: 5px auto; /* 15% from the top and centered */
-        border: 1px solid #888;
+        margin: 0.6rem auto; /* 15% from the top and centered */
+        border: 0.01rem solid #888;
         width: 90%; /* Could be more or less, depending on screen size */
         position: relative;
-
+        border-radius: 10%;
     }
 }
 
