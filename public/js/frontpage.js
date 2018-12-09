@@ -15,7 +15,7 @@ const getRecipes = () => {
     json.forEach((rPICTURE) => {
       const li = document.createElement('li');
       const title = document.createElement('h3');
-      const time = document.createElement('h4');
+      const time = document.createElement('h3');
       title.innerHTML = json[x].rNAME;
       time.innerHTML = prepTime(json[x].rPREPTIME);
       li.appendChild(title);
