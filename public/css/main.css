@@ -171,7 +171,13 @@ footer{
 #mediaform{
     z-index: 9999;
 }
-
+#recipelist{
+    display: flex;
+    flex-wrap: wrap;
+}
+#recipelist li{
+    padding: 1rem;
+}
 @media screen and (max-width: 481px) {
     
     #navigation ul{
