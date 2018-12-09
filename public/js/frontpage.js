@@ -43,6 +43,7 @@ const prepTime= (x) => {
 }
 
 const openRecipe= (x) => {
+  console.log(x);
   sessionStorage.setItem('recipe', x);
   window.location.pathname = '/nodekek/recipedetails.html';
 }
