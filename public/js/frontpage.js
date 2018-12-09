@@ -47,7 +47,7 @@ const openRecipe= (x) => {
   window.location.pathname = '/nodekek/recipedetails.html';
 }
 
-export function currentRecipe(x){
+exports.currentRecipe = function(x){
   let y = x;
   return y;
 }
