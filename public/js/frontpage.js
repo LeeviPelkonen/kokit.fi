@@ -26,6 +26,9 @@ const getRecipes = () => {
       img.addEventListener('click', () => { 
         openRecipe(id);
       });
+      title.addEventListener('click', () => { 
+        openRecipe(id);
+      });
       console.log(json[x].rTHUMBNAIL);
       li.appendChild(img);
       list.appendChild(li);
