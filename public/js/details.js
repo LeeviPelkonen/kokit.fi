@@ -41,7 +41,7 @@ const getImage = () => {
     }).then((json) => {
       console.log(json);
       userName.innerText = json[0].uUSERNAME;
-      fullName.innerText = '${json[0].uFNAME} + ${json[0].uFNAME}';
+      fullName.innerText = json[0].uFNAME + " " + json[0].uFNAME;
     })
   });
 };
