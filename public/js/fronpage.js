@@ -3,7 +3,7 @@
 const list = document.querySelector('#recipelist');
 
 const getRecipes = () => {
-  fetch('/recipes').then((response) => {
+  fetch('/nodekek/recipes').then((response) => {
     return response.json();
   }).then((json) => {
     console.log(json);
