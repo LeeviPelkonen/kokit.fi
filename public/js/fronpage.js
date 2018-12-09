@@ -17,9 +17,7 @@ const getRecipes = () => {
       title.innerHTML = image.title;
       li.appendChild(title);
       const img = document.createElement('img');
-      if (image.thumbnail != undefined){
         img.src = 'thumbnails/' + image.thumbnail;
-      }
       li.appendChild(img);
       list.appendChild(li);
     });
