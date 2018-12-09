@@ -48,7 +48,7 @@ app.use(session({
 }));
 
 passport.use(new LocalStrategy(username, password, done) => {
-  if(username !== 'here sql for the database' || password !== 'same thing here')
+  if( connection.query('SELECT * FROM users WHERE uUSERNAME = ' '+username') || password !== 'same thing here')
   {return done(null, false); }
   return done(null, {username: username});
 });
