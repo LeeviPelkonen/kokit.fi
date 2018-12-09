@@ -41,9 +41,10 @@ const getImage = () => {
       return response.json();
     }).then((json) => {
       console.log(json);
-      userName.innerText = json[0].uUSERNAME;
-      fullName.innerText = json[0].uFNAME + " " + json[0].uLNAME;
+      userName.innerText = "Username: " + json[0].uUSERNAME;
+      fullName.innerText = "Name" + json[0].uFNAME + " " + json[0].uLNAME;
       dateJoined.innerText = "Date joined: " + json[0].uDATEJOINED;
+
     })
   });
 };
