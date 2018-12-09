@@ -476,6 +476,10 @@ span.psw {
     padding-top: 3rem;
 }
 
+#ingredientlist > p {
+    text-align: left;
+}
+
 /* Modal Content/Box */
 .modal-content {
     background-color: #fefefe;
