@@ -3,7 +3,10 @@
 const list = document.querySelector('#recipelist');
 
 const getRecipes = () => {
-  fetch('/nodekek/recipes').then((response) => {
+    const settings = {
+        method: 'get',
+      };
+  fetch('/nodekek/recipes', settings).then((response) => {
     return response.json();
   }).then((json) => {
     console.log(json);
@@ -15,9 +18,6 @@ const getRecipes = () => {
       li.appendChild(title);
       const img = document.createElement('img');
       img.src = 'rTHUMBNAIL/' + image.thumbnail;
-      img.addEventListener('click', () => {
-        fillUpdate(image);
-      });
       li.appendChild(img);
       list.appendChild(li);
     });
