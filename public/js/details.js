@@ -47,7 +47,7 @@ const getImage = () => {
     ingredients.forEach((item) => {
       const li = document.createElement('li');
       const par = document.createElement('p');
-      par.classList.add('ingredientitem');
+      //par.classList.add('ingredientitem');
       par.innerText = item.toString();
       li.appendChild(par);
       ingredientslist.appendChild(par);
