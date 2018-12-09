@@ -111,6 +111,7 @@ app.get('/search', (req, res) => {
 
 app.get('/recipes', (req, res) => {
   db.selectAllRecipes(connection, cb, res);
+  next();
 });
 
 app.patch('/recipes', (req, res) => {
