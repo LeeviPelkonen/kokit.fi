@@ -172,7 +172,9 @@ footer{
     flex-wrap: wrap;
 }
 #recipelist li{
+    width: 30%;
     padding: 1rem;
+    min-width: 18rem;
 }
 @media screen and (max-width: 481px) {
     
