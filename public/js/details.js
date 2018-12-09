@@ -1,6 +1,6 @@
 'use strict';
 
-const recipe = require('./frontpage');
+const front = require('./js/frontpage');
 
 const increase = document.getElementById("increase");
 const decrease =document.getElementById("decrease");
@@ -32,7 +32,10 @@ function decreaseValue() {
 }
 
 const getImage = () => {
-  let x = recipe.currentRecipe();
+  
+let x = front.currentRecipe();
+
+
   const settings = {
     method: 'get',
   };
