@@ -14,7 +14,7 @@ const getRecipes = () => {
     json.forEach((rPICTURE) => {
       const li = document.createElement('li');
       const title = document.createElement('h3');
-      title.innerHTML = rNAME;
+      title.innerHTML = json[0].rNAME;
       li.appendChild(title);
       const img = document.createElement('img');
         img.src = 'thumbnails/' + rPICTURE.thumb;
