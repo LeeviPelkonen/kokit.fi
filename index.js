@@ -30,6 +30,7 @@ const cb = (result, res) => {
 
 app.use(express.static('public'));
 
+
 app.post('/upload', upload.single('mediafile'), (req, res, next) => {
   console.log('/upload happens now');
   console.log('req.query', req.query);
@@ -142,4 +143,3 @@ http.createServer((req, res) => {
 }).listen(8000);
 console.log('listening port: 3000');
 https.createServer(options, app).listen(3000);
-		
