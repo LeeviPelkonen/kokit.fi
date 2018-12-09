@@ -33,21 +33,14 @@ const getImage = () => {
 
 // Get the text field that we're going to track
 let recipe = sessionStorage.getItem('recipe');
- 
+ console.log('recipe = ' + recipe);
 // See if we have an autosave value
 // (this will only happen if the page is accidentally refreshed)
 if (sessionStorage.getItem("autosave")) {
   // Restore the contents of the text field
   recipe.value = sessionStorage.getItem("autosave");
-}
- 
-// Listen for changes in the text field
-recipe.addEventListener("change", function() {
-  // And save the results into the session storage object
-  sessionStorage.setItem("autosave", recipe.value);
-});
-
-
+  console.log('from autosave = ' + recipe);
+};
   const settings = {
     method: 'get',
   };
