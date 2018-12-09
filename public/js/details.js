@@ -39,8 +39,8 @@ const getImage = () => {
     console.log(json[0]);
     image.src = './uploads/' + json[0].rPICTURE;
     foodName.innerText = json[0].rNAME;
-    //instructions.innerText = json[0].rINSTRUCTIONS;
-    //description.innerText = json[0].rDESCRIPTION;
+    instructions.innerText = json[0].rINSTRUCTIONS;
+    description.innerText = json[0].rDESCRIPTION;
     fetch('/nodekek/user/'+json[0].rUSERID).then((response) => {
       return response.json();
     }).then((json) => {
