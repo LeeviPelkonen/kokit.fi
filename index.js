@@ -61,7 +61,8 @@ app.use('/upload', (req, res, next) => {
     req.file.filename + '_thumb',
     req.file.filename + '_medium',
     req.body.PreparationTime,
-
+    req.body.Description,
+    req.body.Instructions
   ];
   db.insert(data, connection, next);
 });

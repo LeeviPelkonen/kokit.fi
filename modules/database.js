@@ -63,7 +63,7 @@ const selectUser = (connection, data, callback) => {
 const insert = (data, connection, callback) => {
   // simple query
   connection.execute(
-      'INSERT INTO recipe (rUSERID, rNAME, rINGREDIENTS, rPICTURE, rTHUMBNAIL, rMEDIUM , rPREPTIME) VALUES (?, ?, ?, ?, ?, ?, ?);',
+      'INSERT INTO recipe (rUSERID, rNAME, rINGREDIENTS, rPICTURE, rTHUMBNAIL, rMEDIUM , rPREPTIME, rDESCRIPTION, rINSTRUCTIONS) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);',
       data,
       (err, results, fields) => {
         // console.log(results); // results contains rows returned by server
