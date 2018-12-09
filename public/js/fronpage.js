@@ -18,7 +18,7 @@ const getRecipes = () => {
       title.innerHTML = json[x].rNAME;
       li.appendChild(title);
       const img = document.createElement('img');
-      img.src = './uploads/' + json[0].rTHUMBNAIL;
+      img.src = './thumbnails/' + json[0].rTHUMBNAIL;
       li.appendChild(img);
       list.appendChild(li);
       x++;
