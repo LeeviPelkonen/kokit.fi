@@ -44,8 +44,8 @@ if (sessionStorage.getItem("autosave")) {
   const settings = {
     method: 'get',
   };
-console.log('x = ' + x);
-  fetch('/nodekek/images/'+x, settings).then((response) => {
+console.log('x = ' + recipe);
+  fetch('/nodekek/images/'+recipe, settings).then((response) => {
     return response.json();
   }).then((json) => {
     console.log(json[0]);
