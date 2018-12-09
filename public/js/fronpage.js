@@ -11,17 +11,17 @@ const getRecipes = () => {
   }).then((json) => {
     console.log(json);
     list.innerHTML = '';
-    json.forEach((image) => {
+    var x = 0;
+    json.forEach((rPICTURE) => {
       const li = document.createElement('li');
       const title = document.createElement('h3');
-      title.innerHTML = image.title;
+      title.innerHTML = json[x].rNAME;
       li.appendChild(title);
       const img = document.createElement('img');
-      if (image.thumbnail != undefined){
-        img.src = 'thumbnails/' + image.thumbnail;
-      }
+      img.src = './thumbnails/' + json[0].rTHUMBNAIL;
       li.appendChild(img);
       list.appendChild(li);
+      x++;
     });
   });
 };
