@@ -40,6 +40,7 @@ const selectAllRecipes = (connection, callback, res) => {
 const selectRecipe = (connection, callback, res) => {
   connection.query(
       'SELECT * FROM recipe WHERE rID = ?;',
+      data,
       (err, results, fields) => {
         console.log(err);
         console.log(results);
