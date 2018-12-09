@@ -30,6 +30,40 @@ const cb = (result, res) => {
 
 app.use(express.static('public'));
 
+passport.serializeUser((user, done) => {
+  done(null, user.id);
+});
+
+passport.deserializeUser((id, done) => {
+  connection.query(('SELECT * FROM users where id =' +id) => {
+      done(err, rows[0]);
+  });
+});
+
+app.use(session({
+  secret: 'keyboard cat',
+  resave: true,
+  saveUninitialized: true,
+  cookie: { secure: true}
+}));
+
+passport.use(new LocalStrategy(username, password, done) => {
+  if(username !== 'here sql for the database' || password !== 'same thing here')
+  {return done(null, false); }
+  return done(null, {username: username});
+});
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+const sslkey = fs.readFileSync('/etc/pki/tls/private/ca.key');
+const sslsecret = fs.readFileSync('/etc/pki/tls/certs/ca.crt');
+
+const passoptions = {
+  key:sslkey,
+  cert:sslcert
+};
+
 app.post('/upload', upload.single('mediafile'), (req, res, next) => {
   console.log('/upload happens now');
   console.log('req.query', req.query);
@@ -124,4 +158,3 @@ http.createServer((req, res) => {
 }).listen(8000);
 console.log('listening port: 3000');
 https.createServer(options, app).listen(3000);
-		
