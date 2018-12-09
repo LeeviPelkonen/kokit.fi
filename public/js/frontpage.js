@@ -34,7 +34,7 @@ getRecipes();
 
 const prepTime= (x) => {
   if(x > 60){
-    let y = (x/60).toFixed(2);
-    return y + ' H';
+    let y = (x/60).toFixed(1);
+    return y + ' h';
   }else return x + ' min';
 }
