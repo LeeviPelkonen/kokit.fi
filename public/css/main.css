@@ -171,7 +171,9 @@ footer{
 #mediaform{
     z-index: 9999;
 }
-
+#recipelistground{
+    width: 100%;
+}
 @media screen and (max-width: 481px) {
     
     #navigation ul{
