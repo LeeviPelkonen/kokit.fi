@@ -17,7 +17,7 @@ const getRecipes = () => {
       const title = document.createElement('h3');
       const time = document.createElement('h4');
       title.innerHTML = json[x].rNAME;
-      time.innerHTML = prepTime;
+      time.innerHTML = prepTime(json[x].rPREPTIME);
       li.appendChild(title);
       li.appendChild(time);
       const img = document.createElement('img');
@@ -32,10 +32,9 @@ const getRecipes = () => {
 
 getRecipes();
 
-const prepTime= () => {
-  if(json[x].rPREPTIME > 60){
-    let x = json[x].rPREPTIME/60;
-    let y = x.toFixed(2);
+const prepTime= (x) => {
+  if(x > 60){
+    let y = (x/60).toFixed(2);
     return y + ' H';
-  }else return json[x].rPREPTIME + ' min';
+  }else return x + ' min';
 }
