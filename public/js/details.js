@@ -4,6 +4,7 @@ const increase = document.getElementById("increase");
 const decrease =document.getElementById("decrease");
 const image = document.getElementById("foodimage");
 const userName = document.getElementById("username");
+const fullName = document.getElementById("fullname");
 const foodName = document.getElementById("foodname");
 
 function increaseValue() {
@@ -39,7 +40,8 @@ const getImage = () => {
       return response.json();
     }).then((json) => {
       console.log(json);
-      userName.innerText = json[0].uFNAME;
+      userName.innerText = json[0].uUSERNAME;
+      fullName.innerText = '${json[0].uFNAME} + ${json[0].uFNAME}';
     })
   });
 };
