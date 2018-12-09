@@ -43,7 +43,7 @@ const prepTime= (x) => {
 }
 
 const openRecipe= (x) => {
-  window.location.pathname = '/recipedetails.html';
+  window.location.pathname = '/nodekek/recipedetails.html';
   fetch('/nodekek/images/'+json[x].rID).then((response) => {
     return response.json();
   }).then((json) => {
