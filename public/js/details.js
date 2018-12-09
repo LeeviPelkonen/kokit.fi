@@ -34,7 +34,7 @@ let x = sessionStorage.getItem('recipe');
   const settings = {
     method: 'get',
   };
-
+console.log(x);
   fetch('/nodekek/images/'+x, settings).then((response) => {
     return response.json();
   }).then((json) => {
