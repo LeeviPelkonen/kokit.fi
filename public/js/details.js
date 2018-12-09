@@ -35,7 +35,7 @@ let x = sessionStorage.getItem('recipe');
     method: 'get',
   };
 
-  fetch('/nodekek/images'+json[x].rID, settings).then((response) => {
+  fetch('/nodekek/images/'+x, settings).then((response) => {
     return response.json();
   }).then((json) => {
     console.log(json[0]);
