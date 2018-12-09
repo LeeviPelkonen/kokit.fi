@@ -37,7 +37,7 @@ const selectAllRecipes = (connection, callback, res) => {
   );
 };
 
-const selectRecipe = (connection, callback, callback) => {
+const selectRecipe = (connection, data, callback) => {
   connection.execute(
       'SELECT * FROM recipe WHERE rID = ?;',
       data,
