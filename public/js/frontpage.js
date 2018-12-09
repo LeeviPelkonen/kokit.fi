@@ -23,7 +23,7 @@ const getRecipes = () => {
       const img = document.createElement('img');
       img.src = './thumbnails/' + json[x].rTHUMBNAIL;
       img.addEventListener('click', () => {
-        openRecipe();
+        openRecipe(json[x].rID);
       });
       console.log(json[x].rTHUMBNAIL);
       li.appendChild(img);
@@ -43,6 +43,6 @@ const prepTime= (x) => {
 }
 
 const openRecipe= (x) => {
-  sessionStorage.setItem('recipe', json[x].rID);
+  sessionStorage.setItem('recipe', x);
   window.location.pathname = '/nodekek/recipedetails.html';
 }
