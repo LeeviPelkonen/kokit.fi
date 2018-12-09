@@ -11,13 +11,13 @@ const getRecipes = () => {
   }).then((json) => {
     console.log(json);
     list.innerHTML = '';
-    json.forEach((image) => {
+    json.forEach((rPICTURE) => {
       const li = document.createElement('li');
       const title = document.createElement('h3');
-      title.innerHTML = image.title;
+      title.innerHTML = rPICTURE.title;
       li.appendChild(title);
       const img = document.createElement('img');
-        img.src = 'thumbnails/' + image.thumb;
+        img.src = 'thumbnails/' + rPICTURE.thumb;
       li.appendChild(img);
       list.appendChild(li);
     });
