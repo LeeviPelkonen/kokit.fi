@@ -109,6 +109,7 @@ const searchTitle = (title, connection) => {
 module.exports = {
   connect: connect,
   select: select,
+  selectAllRecipes: selectAllRecipes,
   selectRecipe: selectRecipe,
   selectUser: selectUser,
   insert: insert,
