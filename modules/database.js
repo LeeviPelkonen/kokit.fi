@@ -26,6 +26,17 @@ const select = (connection, callback, res) => {
   );
 };
 
+const selectAllRecipes = (connection, callback, res) => {
+  connection.query(
+      'SELECT * FROM recipe;',
+      (err, results, fields) => {
+        console.log(err);
+        console.log(results);
+        callback(results, res);
+      },
+  );
+};
+
 const selectRecipe = (connection, callback, res) => {
   connection.query(
       'SELECT * FROM recipe WHERE rID = 3;',

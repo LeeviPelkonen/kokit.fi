@@ -108,6 +108,23 @@ app.get('/search', (req, res) => {
   });
 });
 
+app.get('/recipes', (req, res) => {
+  db.selectAllRecipes(connection, cb, res);
+});
+
+app.patch('/recipes', (req, res) => {
+  const data = [
+    req.body.rNAME,
+    req.body.rPICTURE,
+    req.body.rINGREDIENTS,
+    req.body.rPREPTIME,
+  ];
+  db.update(data, connection).then((result) => {
+  }).catch((err) => {
+    console.log(err);
+  });
+});
+
 const sslkey = fs.readFileSync('/etc/pki/tls/private/ca.key');
 const sslcert = fs.readFileSync('/etc/pki/tls/certs/ca.crt');
 
