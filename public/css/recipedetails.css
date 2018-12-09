@@ -476,8 +476,8 @@ span.psw {
     padding-top: 3rem;
 }
 
-.ingredientitem {
-    display: inline;
+#ingredientlist > p {
+    text-align: left;
 }
 
 /* Modal Content/Box */
