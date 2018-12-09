@@ -19,6 +19,7 @@ const getRecipes = () => {
       li.appendChild(title);
       const img = document.createElement('img');
       img.src = './thumbnails/' + json[0].rTHUMBNAIL;
+      console.log(json[0].rTHUMBNAIL);
       li.appendChild(img);
       list.appendChild(li);
       x++;
