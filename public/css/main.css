@@ -173,6 +173,8 @@ footer{
     padding: 0;
 }
 #recipelist li{
+    display: flex;
+    flex-wrap: wrap;
     margin: 0.5rem;
     border: black;
     border-style: solid;
@@ -185,7 +187,10 @@ footer{
 #recipelist h3{
     border: black;
     border-style: solid;
+    height: fit-content;
+    width: fit-content;
     padding: 0 0.5rem 0;
+    margin: 0;
 }
 #recipelist img{
     border: black;
