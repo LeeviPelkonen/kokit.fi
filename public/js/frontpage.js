@@ -22,6 +22,9 @@ const getRecipes = () => {
       li.appendChild(time);
       const img = document.createElement('img');
       img.src = './thumbnails/' + json[x].rTHUMBNAIL;
+      img.addEventListener('click', () => {
+        openRecipe();
+      });
       console.log(json[x].rTHUMBNAIL);
       li.appendChild(img);
       list.appendChild(li);
@@ -37,4 +40,16 @@ const prepTime= (x) => {
     let y = (x/60).toFixed(1);
     return y + ' h';
   }else return x + ' min';
+}
+
+const openRecipe= (x) => {
+  window.location.pathname = '/recipedetails.html';
+  fetch('/nodekek/images/'+json[x].rID).then((response) => {
+    return response.json();
+  }).then((json) => {
+    console.log(json);
+    userName.innerText = "Username: " + json[0].uUSERNAME;
+    fullName.innerText = "Name: " + json[0].uFNAME + " " + json[0].uLNAME;
+    dateJoined.innerText = "Date joined: " + json[0].uDATEJOINED;
+  })
 }
