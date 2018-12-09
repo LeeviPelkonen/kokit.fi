@@ -136,6 +136,7 @@ input#number {
     width: 50%;
     padding: 0;
     margin: 0;
+    text-align: left;
 }
 
 .instructions {
@@ -477,7 +478,7 @@ span.psw {
 }
 
 .ingredientitem {
-    display: inline;
+    display: inline-grid;
 }
 
 /* Modal Content/Box */
