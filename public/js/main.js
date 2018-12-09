@@ -111,7 +111,7 @@ closebtn.addEventListener("click", exit);
 
 opensearch.addEventListener('click', openSearch);
 burger.addEventListener('click', openMenu);
-frm.addEventListener('submit', sendForm);
+//frm.addEventListener('submit', sendForm);
 
 
 // When the user clicks anywhere outside of the modal, close it
