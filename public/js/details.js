@@ -1,5 +1,7 @@
 'use strict';
 
+import {currentRecipe} from 'frontpage.js'
+
 const increase = document.getElementById("increase");
 const decrease =document.getElementById("decrease");
 const image = document.getElementById("foodimage");
@@ -30,11 +32,12 @@ function decreaseValue() {
 }
 
 const getImage = () => {
+  let recipe = currentRecipe();
   const settings = {
     method: 'get',
   };
 
-  fetch('/nodekek/images', settings).then((response) => {
+  fetch('/nodekek/images'+json[recipe].rID, settings).then((response) => {
     return response.json();
   }).then((json) => {
     console.log(json[0]);

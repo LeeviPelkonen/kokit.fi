@@ -43,13 +43,11 @@ const prepTime= (x) => {
 }
 
 const openRecipe= (x) => {
+  currentRecipe(x);
   window.location.pathname = '/nodekek/recipedetails.html';
-  fetch('/nodekek/images/'+json[x].rID).then((response) => {
-    return response.json();
-  }).then((json) => {
-    console.log(json);
-    userName.innerText = "Username: " + json[0].uUSERNAME;
-    fullName.innerText = "Name: " + json[0].uFNAME + " " + json[0].uLNAME;
-    dateJoined.innerText = "Date joined: " + json[0].uDATEJOINED;
-  })
+}
+
+export function currentRecipe(x){
+  let y = x;
+  return y;
 }
