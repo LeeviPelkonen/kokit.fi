@@ -6,6 +6,8 @@ const image = document.getElementById("foodimage");
 const userName = document.getElementById("username");
 const fullName = document.getElementById("fullname");
 const dateJoined = document.getElementById("datejoined");
+const description = document.getElementById("description");
+const instructions = document.getElementById("instuctions");
 const foodName = document.getElementById("foodname");
 
 function increaseValue() {
@@ -37,14 +39,15 @@ const getImage = () => {
     console.log(json[0]);
     image.src = './uploads/' + json[0].rPICTURE;
     foodName.innerText = json[0].rNAME;
+    instructions.innerText = json[0].rINSTRUCTIONS;
+    description.innerText = json[0].rDESCRIPTION;
     fetch('/nodekek/user/'+json[0].rUSERID).then((response) => {
       return response.json();
     }).then((json) => {
       console.log(json);
       userName.innerText = "Username: " + json[0].uUSERNAME;
-      fullName.innerText = "Name" + json[0].uFNAME + " " + json[0].uLNAME;
+      fullName.innerText = "Name: " + json[0].uFNAME + " " + json[0].uLNAME;
       dateJoined.innerText = "Date joined: " + json[0].uDATEJOINED;
-
     })
   });
 };
