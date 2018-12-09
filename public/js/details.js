@@ -9,6 +9,7 @@ const dateJoined = document.getElementById("datejoined");
 const description = document.getElementById("description");
 const instructions = document.getElementById("instructions");
 const foodName = document.getElementById("foodname");
+const ingredientslist = document.getElementById("ingredientlist");
 
 function increaseValue() {
   console.log('working');
@@ -41,6 +42,17 @@ const getImage = () => {
     foodName.innerText = json[0].rNAME;
     instructions.innerText = json[0].rINSTRUCTIONS;
     description.innerText = json[0].rDESCRIPTION;
+    const ingredients = json[0].rINGREDIENTS.split(',');
+    ingredientslist.innerHTML = '';
+    ingredients.forEach((item) => {
+      const li = document.createElement('li');
+      const par = document.createElement('p');
+      par.innerText = item.toString();
+      li.appendChild(par);
+      ingredientslist.appendChild(par);
+    });
+
+
     fetch('/nodekek/user/'+json[0].rUSERID).then((response) => {
       return response.json();
     }).then((json) => {
