@@ -32,19 +32,19 @@ function decreaseValue() {
 const getImage = () => {
 
 // Get the text field that we're going to track
-let x = sessionStorage.getItem('recipe');
+let recipe = sessionStorage.getItem('recipe');
  
 // See if we have an autosave value
 // (this will only happen if the page is accidentally refreshed)
 if (sessionStorage.getItem("autosave")) {
   // Restore the contents of the text field
-  x.value = sessionStorage.getItem("autosave");
+  recipe.value = sessionStorage.getItem("autosave");
 }
  
 // Listen for changes in the text field
-x.addEventListener("change", function() {
+recipe.addEventListener("change", function() {
   // And save the results into the session storage object
-  sessionStorage.setItem("autosave", x.value);
+  sessionStorage.setItem("autosave", recipe.value);
 });
 
 
