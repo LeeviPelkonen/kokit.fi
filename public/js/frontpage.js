@@ -11,7 +11,7 @@ const getRecipes = () => {
   }).then((json) => {
     console.log(json);
     list.innerHTML = '';
-    var x = 0;
+    let x = 0;
     json.forEach((rPICTURE) => {
       const li = document.createElement('li');
       const title = document.createElement('h3');
