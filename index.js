@@ -72,6 +72,13 @@ app.use('/upload', (req, res) => {
   db.select(connection, cb, res);
 });
 
+app.get('/images/:id', function(req, res) {
+  console.log('recipe ' + req.params.id);
+  db.selectRecipe(connection, [req.params.id], (response) => {
+    res.send(response);
+  });
+});
+
 app.get('/images', (req, res) => {
   db.selectRecipe(connection, cb, res);
 });
