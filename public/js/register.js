@@ -6,7 +6,7 @@ const registerForm = (evt) => {
     evt.preventDefault();
     const ff = new FormData(form);
     const settings = {
-        method: 'post',
+        method: 'use',
         body: ff,
     };
 
