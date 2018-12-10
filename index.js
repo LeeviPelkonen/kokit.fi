@@ -134,6 +134,19 @@ app.get('/user/:id', function(req, res) {
   });
 });
 
+app.use('/register', (req, res, next) => {
+  console.log(req.body);
+  const data = [
+    req.body.uname,
+    req.body.fname,
+    req.body.lname,
+    req.body.email,
+    req.body.pswr,
+    req.body.psw-repeat,
+  ];
+  db.register(data, connection, next);
+});
+
 /*
 app.patch('/images', (req, res) => {
 	const data = [
