@@ -93,7 +93,6 @@ const register = (data, connection) => {
     data,
     (err, results, fields) => {
       console.log(results);
-      callback();
     },
   );
 };
