@@ -50,7 +50,9 @@ const getRecipes = (x) => {
                 //console.log('searching recipe by name');
                 //console.log((json[x].rNAME));
                 //console.log((title));
-                if (((json[x].rNAME).toLowerCase).includes(title.toLowerCase)) {
+                const name = (json[x].rNAME).toLowerCase;
+                const search = title.toLowerCase;
+                if (name.includes(search)) {
                     //console.log('sfound one');
                     const li = document.createElement('li');
                     const title = document.createElement('h3');
