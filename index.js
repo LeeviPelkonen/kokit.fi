@@ -149,8 +149,6 @@ const options = {
   cert: sslcert,
 };
 
-const today = Date();
-
 app.post('/register', (req, res, next) => {
   console.log(req.body);
   const data = [
@@ -158,7 +156,6 @@ app.post('/register', (req, res, next) => {
     req.body.fname,
     req.body.lname,
     'kuvaAvatar',
-    today,
     req.body.pswr,
   ];
   db.register(data, connection, next);
