@@ -149,13 +149,14 @@ const options = {
   cert: sslcert,
 };
 
+
 app.use('/register', (req, res, next) => {
   console.log(req.body);
   const data = [
     req.body.uname,
     req.body.fname,
     req.body.lname,
-    req.body.email,
+    'null',
     req.body.pswr,
   ];
   db.register(data, connection, next);
