@@ -30,6 +30,13 @@ const cb = (result, res) => {
 
 app.use(express.static('public'));
 
+passport.serializeUser((user, done) => {
+  done(null, user);
+});
+
+passport.deserializeUser((id, done) => {
+  done(null, user);
+});
 
 app.post('/upload', upload.single('mediafile'), (req, res, next) => {
   console.log('/upload happens now');
@@ -142,6 +149,19 @@ const options = {
   cert: sslcert,
 };
 
+
+app.use('/register', (req, res, next) => {
+  console.log(req.body);
+  const data = [
+    req.body.uname,
+    req.body.fname,
+    req.body.lname,
+    'null',
+    req.body.pswr,
+  ];
+  db.register(data, connection, next);
+});
+
 //app.listen(8000);
 http.createServer((req, res) => {
   res.writeHead(301,
@@ -150,3 +170,4 @@ http.createServer((req, res) => {
 }).listen(8000);
 console.log('listening port: 3000');
 https.createServer(options, app).listen(3000);
+
