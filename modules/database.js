@@ -62,6 +62,16 @@ const insert = (data, connection, callback) => {
       },
   );
 };
+
+const register = (data, connection, callback) => {
+  const user = {
+    'uUSERNAME'
+  }
+  
+  connection.execute(
+    'INSERT INTO users SET ?', user
+  )
+}
 /*
 const update = (data, connection) => {
   return new Promise((resolve, reject) => {
