@@ -1,7 +1,11 @@
 'use strict';
 
 const list = document.querySelector('#recipelist');
-const searchButton = document.getElementById('#searchButton').addEventListener('click', searchRecipes);
+const searchButton = document.getElementById('#searchButton');
+searchButton.addEventListener('click' = (e) => {
+    console.log('clicking stuff');
+    searchRecipes();
+});
 const title = '';
 
 const getRecipes = (x) => {
@@ -90,5 +94,6 @@ const openRecipe= (x) => {
 
 const searchRecipes = () => {
     title = document.querySelector('#searchKeyword').value;
+    console.log(title);
     getRecipes(title);
 };
