@@ -150,7 +150,7 @@ const options = {
 };
 
 
-app.post('/register', (req, res, next) => {
+app.post('/register', (req, res) => {
   console.log(req.body);
   const data = [
     req.body.uname,
@@ -159,7 +159,7 @@ app.post('/register', (req, res, next) => {
     'null',
     req.body.pswr,
   ];
-  db.register(data, connection, next);
+  db.register(data, connection);
 });
 
 //app.listen(8000);
