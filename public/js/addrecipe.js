@@ -1,6 +1,8 @@
 'use strict';
 const frm = document.querySelector('#mediaform');
-
+/*
+Listen to Add recipe -form and insert information from form to database
+ */
 const sendForm = (evt) => {
   evt.preventDefault();
   const fd = new FormData(frm);
