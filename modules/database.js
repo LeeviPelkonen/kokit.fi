@@ -12,6 +12,18 @@ const connect = () => {
   return connection;
 };
 
+const checkUsername = () => {
+  connection.query(
+      'SELECT * FROM users WHERE uUSERNAME = ?', data
+  )
+};
+
+const checkPassword = () => {
+  connection.query(
+      'SELECT * FROM users WHERE uPASSWORD = ?', data
+  )
+};
+
 const select = (connection, callback, res) => {
   // simple query
   connection.query(
@@ -127,6 +139,8 @@ module.exports = {
   selectUser: selectUser,
   insert: insert,
   register:register,
+  checkUsername: checkUsername,
+  checkPassword: checkPassword,
   //update: update,
   //deleteImage: deleteImage,
   //searchTitle: searchTitle,
