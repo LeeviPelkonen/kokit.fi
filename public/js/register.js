@@ -4,6 +4,8 @@ const form = document.getElementById('register');
 const password = document.getElementById("password")
   , confirm_password = document.getElementById("confirm_password");
 
+
+
 const registerForm = (evt) => {
     evt.preventDefault();
     const ff = new FormData(form);
