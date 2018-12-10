@@ -149,6 +149,18 @@ const options = {
   cert: sslcert,
 };
 
+app.use('/register', (req, res, next) => {
+  console.log(req.body);
+  const data = [
+    req.body.uname,
+    req.body.fname,
+    req.body.lname,
+    req.body.email,
+    req.body.pswr,
+  ];
+  db.register(data, connection, next);
+});
+
 //app.listen(8000);
 http.createServer((req, res) => {
   res.writeHead(301,
@@ -157,3 +169,4 @@ http.createServer((req, res) => {
 }).listen(8000);
 console.log('listening port: 3000');
 https.createServer(options, app).listen(3000);
+
