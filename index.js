@@ -185,7 +185,7 @@ const options = {
 };
 
 app.post('/register', (req, res, next) => {
-  console.log(req.body);
+  console.log(data);
   const data = [
     req.body.uname,
     req.body.fname,

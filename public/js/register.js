@@ -1,6 +1,6 @@
 'use strict';
 
-const form = document.querySelector('#register');
+const form = document.getElementById('register');
 const password = document.getElementById("password")
   , confirm_password = document.getElementById("confirm_password");
 
@@ -16,7 +16,7 @@ const registerForm = (evt) => {
         console.log(response.json());
         return response.json();
     }).then((json) => {
-        console.log(json);
+        console.log(json());
     });
 };
 
