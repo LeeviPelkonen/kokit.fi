@@ -74,6 +74,17 @@ const insert = (data, connection, callback) => {
       },
   );
 };
+
+const register = (data, connection, callback) => { 
+  connection.execute(
+    'INSERT INTO users (uUSERNAME, uFNAME, uLNAME, uAVATAR, uDATEJOINED, uPASSWORD) VALUES (?, ?, ?, ?, ?, ?);',
+    data,
+    (err, results, fields) => {
+      console(err);
+      callback();
+    },
+  );
+};
 /*
 const update = (data, connection) => {
   return new Promise((resolve, reject) => {
