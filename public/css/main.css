@@ -1,4 +1,4 @@
-/*värit*/
+/*colors*/
 .black-b{
     background-color:#0000;
 }
@@ -6,34 +6,16 @@
     color:#0000;
 }
 .white-b{
-    background-color:#000000;
+    background-color:rgb(255, 255, 255);
 }
 .white-t{
-    color:#000000;
+    color:rgb(255, 255, 255);
 }
-.beige-b{
-    background-color: rgb(255, 255, 255);
+.sand{
+    background-color: rgb(230, 188, 98);
 }
-.beige-t{
-    color: rgb(255, 255, 255);
-}
-.light-b{
-    background-color: rgba(255, 255, 255,0.9);
-}
-.light-t{
-    color: rgb(255, 255, 255);
-}
-.grey-b{
-    background-color: rgba(255, 255, 255,0.9);
-}
-.grey-t{
-    color: rgb(255, 255, 255);
-}
-.red-b{
-    background-color: rgb(80, 189, 32);
-}
-.red-t{
-    color: rgb(80, 189, 32);
+.sandDark{
+    color: rgb(212, 173, 93);
 }
 /*------------------------------------------------*/
 html{
@@ -45,7 +27,7 @@ html{
     display: block;
 }
 .button:hover{
-    background-color:rgb(112, 220, 66);
+    background-color:rgb(212, 173, 93);
 }
 body{
     margin: 0;
@@ -269,7 +251,7 @@ input[type=text], input[type=password] {
 
 /* Set a style for all buttons */
 .logbutton {
-    background-color: #4CAF50;
+    background-color: rgb(212, 173, 93);
     color: white;
     padding: 0.5rem;
     margin: 0;
@@ -279,7 +261,7 @@ input[type=text], input[type=password] {
 }
 
 .loginbutton {
-    background-color: #4CAF50;
+    background-color: rgb(212, 173, 93);
     color: white;
     padding: 0.5rem 1rem;
     margin: 0.3rem 0;
@@ -289,7 +271,7 @@ input[type=text], input[type=password] {
 }
 
 .signup {
-    background-color: #4CAF50;
+    background-color: rgb(230, 188, 98);
     color: white;
     padding: 0.4rem 0.8rem;
     margin: 0.3rem 0;
@@ -430,7 +412,7 @@ span.psw {
     }
 
     .logbutton {
-        background-color: #4CAF50;
+        background-color: rgb(230, 188, 98);
         color: white;
         padding: 0;
         margin: 0;
