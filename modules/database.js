@@ -92,7 +92,6 @@ const register = (data, connection, callback) => {
     'INSERT INTO users (uUSERNAME, uFNAME, uLNAME, uAVATAR, uDATEJOIINED, uPASSWORD) VALUES (?, ?, ?, ?, ?, ?);',
     data,
     (err, results, fields) => {
-      console(err);
       console.log(results);
       callback();
     },
