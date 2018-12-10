@@ -14,8 +14,6 @@ const closebtn = document.getElementById('closebtn');
 
 const burger = document.getElementById('burger');
 const opensearch = document.getElementById('openSearchButton');
-const password = document.getElementById("password")
-  , confirm_password = document.getElementById("confirm_password");
 
 /*const testFunc = (evt) => {
   evt.preventDefault();
@@ -103,17 +101,6 @@ window.onclick = event => {
     modal1.style.display = "none";
   }
 };
-
-function validatePassword(){
-  if(password.value != confirm_password.value) {
-    confirm_password.setCustomValidity("Passwords Don't Match");
-  } else {
-    confirm_password.setCustomValidity('');
-  }
-}
-
-password.addEventListener('change', validatePassword);
-confirm_password.addEventListener('keyup', validatePassword);
 
 
 
