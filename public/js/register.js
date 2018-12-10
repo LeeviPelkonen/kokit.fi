@@ -6,7 +6,7 @@ const password = document.getElementById("password")
 
 const registerForm = (evt) => {
     evt.preventDefault();
-    const ff = new FormData(form);
+    ff = new FormData(form);
     const settings = {
         method: 'post',
         body: ff,
