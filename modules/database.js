@@ -89,7 +89,7 @@ const insert = (data, connection, callback) => {
 
 const register = (data, connection, callback) => { 
   connection.execute(
-    'INSERT INTO users (uUSERNAME, uFNAME, uLNAME, uDATAJOINED, uPASSWORD) VALUES (?, ?, ?, DEFAULT, ?);',
+    'INSERT INTO users (uUSERNAME, uFNAME, uLNAME, uPASSWORD) VALUES (?, ?, ?, ?);',
     data,
     (err, results, fields) => {
       console(err);
