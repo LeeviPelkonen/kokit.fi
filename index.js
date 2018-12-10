@@ -157,6 +157,7 @@ app.post('/register', (req, res, next) => {
     req.body.lname,
     req.body.pswr,
   ];
+  console.log(data);
   db.register(data, connection, next);
 });
 
