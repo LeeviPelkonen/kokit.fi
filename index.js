@@ -194,7 +194,7 @@ app.post('/register', (req, res) => {
     req.body.lname,
     null,
     today,
-    req.body.psw,
+    req.body.pswr,
   ];
   console.log(data);
   db.register(data, connection, cb);
