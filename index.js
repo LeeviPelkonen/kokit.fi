@@ -150,7 +150,7 @@ const options = {
 };
 
 
-app.use('/register', (req, res, next) => {
+app.post('/register', (req, res, next) => {
   console.log(req.body);
   const data = [
     req.body.uname,

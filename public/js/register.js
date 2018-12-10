@@ -8,11 +8,12 @@ const registerForm = (evt) => {
     evt.preventDefault();
     const ff = new FormData(form);
     const settings = {
-        method: 'use',
+        method: 'post',
         body: ff,
     };
 
     fetch('/nodekek/register', settings).then((response) => {
+        console.log(response.json());
         return response.json();
     }).then((json) => {
         console.log(json);
