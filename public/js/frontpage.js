@@ -47,7 +47,9 @@ const getRecipes = (x) => {
             list.innerHTML = '';
             let x = 0;
             json.forEach((rPICTURE) => {
-                if (json[x].rNAME.includes(x)) {
+                console.log('searching recipe by name');
+                if ((json[x].rNAME).includes(x)) {
+                    console.log('sfound one');
                     const li = document.createElement('li');
                     const title = document.createElement('h3');
                     const time = document.createElement('h3');
