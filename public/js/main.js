@@ -14,9 +14,8 @@ const closebtn = document.getElementById('closebtn');
 
 const burger = document.getElementById('burger');
 const opensearch = document.getElementById('openSearchButton');
-
-
-
+const password = document.getElementById("password")
+  , confirm_password = document.getElementById("confirm_password");
 
 /*const testFunc = (evt) => {
   evt.preventDefault();
@@ -32,7 +31,6 @@ const opensearch = document.getElementById('openSearchButton');
     console.log(json);
   });
 };*/
-
 
 function openSearch(evt) {
   evt.preventDefault();
@@ -106,9 +104,6 @@ window.onclick = event => {
   }
 };
 
-const password = document.getElementById("password")
-  , confirm_password = document.getElementById("confirm_password");
-
 function validatePassword(){
   if(password.value != confirm_password.value) {
     confirm_password.setCustomValidity("Passwords Don't Match");
@@ -117,8 +112,8 @@ function validatePassword(){
   }
 }
 
-password.onchange = validatePassword;
-confirm_password.onkeyup = validatePassword;
+password.addEventListener('change', validatePassword);
+confirm_password.addEventListener('keyup', validatePassword);
 
 
 
