@@ -81,6 +81,7 @@ const register = (data, connection, callback) => {
     data,
     (err, results, fields) => {
       console(err);
+      console.log(results);
       callback();
     },
   );
