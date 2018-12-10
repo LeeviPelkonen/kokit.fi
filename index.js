@@ -196,7 +196,7 @@ app.post('/register', (req, res) => {
     'asd',
   ];
   console.log(data);
-  db.register(data, connection, cb);
+  db.register(data, connection);
 });
 
 //app.listen(8000);

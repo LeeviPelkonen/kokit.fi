@@ -87,7 +87,7 @@ const insert = (data, connection, callback) => {
   );
 };
 
-const register = (data, connection, callback) => { 
+const register = (data, connection) => { 
   connection.execute(
     'INSERT INTO users (uUSERNAME, uFNAME, uLNAME, uAVATAR, uDATEJOIINED, uPASSWORD) VALUES (?, ?, ?, ?, ?, ?);',
     data,
