@@ -2,13 +2,13 @@
 
 const list = document.querySelector('#recipelist');
 const searchButton = document.getElementById('#searchButton');
-const title;
+const title = '';
 
 const getRecipes = (x) => {
     const settings = {
         method: 'get',
     };
-    if (x == undefined) {
+    if (x == '') {
         fetch('/nodekek/recipes', settings).then((response) => {
             return response.json();
         }).then((json) => {
@@ -73,7 +73,7 @@ const getRecipes = (x) => {
     }
 };
 
-getRecipes();
+getRecipes(title);
 
 const prepTime= (x) => {
   if(x > 60){
