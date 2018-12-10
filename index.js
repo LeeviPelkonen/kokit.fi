@@ -150,7 +150,7 @@ const options = {
 };
 
 
-app.use('/register', (req, res) => {
+app.use('/register', (req, res, next) => {
   console.log(req.body);
   const data = [
     req.body.uname,
@@ -159,7 +159,7 @@ app.use('/register', (req, res) => {
     'null',
     req.body.pswr,
   ];
-  db.register(data, connection);
+  db.register(data, connection, next);
 });
 
 //app.listen(8000);
