@@ -38,6 +38,39 @@ passport.deserializeUser((id, done) => {
   done(null, user);
 });
 
+app.use(session({
+  secret: 'keyboard LOL cat',
+  resave: true,
+  saveUninitialized: true,
+  cookie: { secure: true }
+}));
+
+app.post('/login', (req, res, next) => {
+  console.log(req.query);
+  const data = [
+      req.body.uname,
+      req.body.psw
+  ];
+  console.log(data);
+  db.checkUsername()
+});
+passport.use(new LocalStrategy(
+    (username, password, done) => {
+      console.log('Here we go: ' + username);
+      if (username !== process.env.USR_NAME || password !== process.env.USR_PWD) { return done(null, false); }
+      return done(null, { username: username } );
+    }
+));
+
+passport.authenticate('local', { successRedirect: '/nodekek/', failureRedirect: '/nodekek/' }));
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+
+
+app.set('trust proxy');
+
 app.post('/upload', upload.single('mediafile'), (req, res, next) => {
   console.log('/upload happens now');
   console.log('req.query', req.query);
@@ -140,6 +173,8 @@ app.patch('/recipes', (req, res) => {
     console.log(err);
   });
 });
+
+
 
 const sslkey = fs.readFileSync('/etc/pki/tls/private/ca.key');
 const sslcert = fs.readFileSync('/etc/pki/tls/certs/ca.crt');
