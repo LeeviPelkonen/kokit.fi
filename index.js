@@ -185,11 +185,14 @@ const options = {
   cert: sslcert,
 };
 
+const today = Date();
 app.post('/register', (req, res) => {
   const data = [
     req.body.uname,
     req.body.fname,
     req.body.lname,
+    null,
+    today,
     req.body.pswr,
   ];
   console.log(data);
