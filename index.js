@@ -184,8 +184,7 @@ const options = {
   cert: sslcert,
 };
 
-app.post('/register', (req, res, next) => {
-  console.log(data);
+app.post('/register', (req, res) => {
   const data = [
     req.body.uname,
     req.body.fname,
@@ -193,7 +192,7 @@ app.post('/register', (req, res, next) => {
     req.body.pswr,
   ];
   console.log(data);
-  db.register(data, connection, next);
+  db.register(data, connection);
 });
 
 //app.listen(8000);
