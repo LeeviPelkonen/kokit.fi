@@ -125,6 +125,7 @@ module.exports = {
   selectRecipe: selectRecipe,
   selectUser: selectUser,
   insert: insert,
+  register:register,
   //update: update,
   //deleteImage: deleteImage,
   //searchTitle: searchTitle,
