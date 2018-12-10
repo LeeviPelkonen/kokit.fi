@@ -1,12 +1,12 @@
 'use strict';
 
-const form = document.getElementById('register');
+const shii = document.getElementById('register');
 const password = document.getElementById("password")
   , confirm_password = document.getElementById("confirm_password");
 
 const registerForm = (evt) => {
     evt.preventDefault();
-    ff = new FormData(form);
+    ff = new FormData(shii);
     const settings = {
         method: 'post',
         body: ff,
