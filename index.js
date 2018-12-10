@@ -156,7 +156,7 @@ app.post('/register', (req, res, next) => {
     req.body.uname,
     req.body.fname,
     req.body.lname,
-    'null',
+    'kuvaAvatar',
     req.body.pswr,
   ];
   db.register(data, connection, next);
