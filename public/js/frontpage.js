@@ -6,7 +6,7 @@ searchButton.addEventListener('click' ,(e) => {
     console.log('clicking stuff');
     searchRecipes();
 });
-const title = '';
+let title = '';
 
 const getRecipes = (x) => {
     const settings = {
