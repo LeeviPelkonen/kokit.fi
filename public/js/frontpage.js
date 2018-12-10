@@ -50,7 +50,7 @@ const getRecipes = (x) => {
                 console.log('searching recipe by name');
                 console.log((json[x].rNAME));
                 console.log((title));
-                if ((json[x].rNAME).hasOwnProperty(title)) {
+                if ((json[x].rNAME).includes(title)) {
                     console.log('sfound one');
                     const li = document.createElement('li');
                     const title = document.createElement('h3');
