@@ -162,6 +162,7 @@ app.get('/recipes', (req, res) => {
 });
 
 app.patch('/recipes', (req, res) => {
+  console.log(req.body);
   const data = [
     req.body.rNAME,
     req.body.rPICTURE,
