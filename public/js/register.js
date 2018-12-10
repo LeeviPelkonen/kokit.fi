@@ -13,7 +13,6 @@ const registerForm = (evt) => {
         method: 'post',
         body: ff,
     };
-    console.log(ff.get('uname'));
 
     fetch('/nodekek/register', settings).then((response) => {
         console.log(response.json());
