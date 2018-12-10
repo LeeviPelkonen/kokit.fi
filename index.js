@@ -142,7 +142,6 @@ app.use('/register', (req, res, next) => {
     req.body.lname,
     req.body.email,
     req.body.pswr,
-    req.body.psw-repeat,
   ];
   db.register(data, connection, next);
 });
