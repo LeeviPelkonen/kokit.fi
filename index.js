@@ -30,6 +30,13 @@ const cb = (result, res) => {
 
 app.use(express.static('public'));
 
+passport.serializeUser((user, done) => {
+  done(null, user);
+});
+
+passport.deserializeUser((id, done) => {
+  done(null, user);
+});
 
 app.post('/upload', upload.single('mediafile'), (req, res, next) => {
   console.log('/upload happens now');
