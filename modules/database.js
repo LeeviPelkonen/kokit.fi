@@ -87,12 +87,13 @@ const insert = (data, connection, callback) => {
   );
 };
 
-const register = (data, connection) => { 
+const register = (data, connection, callback) => { 
   connection.execute(
     'INSERT INTO users (uUSERNAME, uFNAME, uLNAME, uAVATAR, uDATEJOIINED, uPASSWORD) VALUES (?, ?, ?, ?, ?, ?);',
     data,
     (err, results, fields) => {
       console.log(results);
+      callback();
     },
   );
 };

@@ -188,15 +188,15 @@ const options = {
 const today = Date();
 app.post('/register', (req, res) => {
   const data = [
-    'testman',
-    'test',
-    'man',
+    req.body.uname,
+    req.body.fname,
+    req.body.lname,
     null,
     today,
-    'asd',
+    req.body.psw,
   ];
   console.log(data);
-  db.register(data, connection);
+  db.register(data, connection, cb);
 });
 
 //app.listen(8000);
