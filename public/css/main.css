@@ -101,6 +101,7 @@ section{
 main{
     padding: 0 1rem 1rem 1rem;
     box-sizing: border-box;
+    width: 100%;
 }
 article figure{
     float: left;
