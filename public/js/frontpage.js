@@ -2,6 +2,7 @@
 
 const list = document.querySelector('#recipelist');
 const searchButt = document.getElementById('searchButton');
+const quickButt = document.getElementById('quickButton');
 let title = '';
 
 const getRecipes = (x) => {
@@ -37,6 +38,38 @@ const getRecipes = (x) => {
                     li.appendChild(img);
                     list.appendChild(li);
                     x++;
+            });
+        });
+    } if (x == 'quick') {
+        fetch('/nodekek/recipes', settings).then((response) => {
+            return response.json();
+        }).then((json) => {
+            //console.log(json);
+            list.innerHTML = '';
+            let x = 0;
+            json.forEach((rPICTURE) => {
+                if (json[x].rPREPTIME < 50) { 
+                const li = document.createElement('li');
+                const title = document.createElement('h3');
+                const time = document.createElement('h3');
+                title.innerHTML = json[x].rNAME;
+                time.innerHTML = prepTime(json[x].rPREPTIME);
+                li.appendChild(title);
+                li.appendChild(time);
+                const img = document.createElement('img');
+                img.src = './thumbnails/' + json[x].rTHUMBNAIL;
+                const id = json[x].rID;
+                img.addEventListener('click', () => {
+                    openRecipe(id);
+                });
+                title.addEventListener('click', () => {
+                    openRecipe(id);
+                });
+                //console.log(json[x].rTHUMBNAIL);
+                li.appendChild(img);
+                list.appendChild(li);
+                }
+                x++;
             });
         });
     } else {
@@ -101,4 +134,11 @@ const searchRecipes = () => {
     getRecipes(title);
 };
 
-searchButt.addEventListener('click',searchRecipes);
+const searchQuick = () => {
+    title = 'quick';
+    //console.log(title);
+    getRecipes(title);
+};
+
+searchButt.addEventListener('click', searchRecipes);
+quickButt.addEventListener('click', searchQuick);
