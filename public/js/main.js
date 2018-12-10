@@ -100,8 +100,6 @@ function validatePassword(){
   }
 }
 
-password.onchange = validatePassword;
-confirm_password.onkeyup = validatePassword;
 
 login.addEventListener("click", close);
 logbutton.addEventListener("click", show);
