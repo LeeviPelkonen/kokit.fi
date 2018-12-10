@@ -30,6 +30,7 @@ const cb = (result, res) => {
 
 app.use(express.static('public'));
 
+
 app.post('/upload', upload.single('mediafile'), (req, res, next) => {
   console.log('/upload happens now');
   console.log('req.query', req.query);
@@ -69,6 +70,13 @@ app.use('/upload', (req, res, next) => {
 
 app.use('/upload', (req, res) => {
   db.select(connection, cb, res);
+});
+
+app.get('/images/:id', function(req, res) {
+  console.log('recipe ' + req.params.id);
+  db.selectRecipe(connection, [req.params.id], (response) => {
+    res.send(response);
+  });
 });
 
 app.get('/images', (req, res) => {
@@ -142,4 +150,3 @@ http.createServer((req, res) => {
 }).listen(8000);
 console.log('listening port: 3000');
 https.createServer(options, app).listen(3000);
-		

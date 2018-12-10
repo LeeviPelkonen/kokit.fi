@@ -30,11 +30,22 @@ function decreaseValue() {
 }
 
 const getImage = () => {
+
+// Get the text field that we're going to track
+let recipe = sessionStorage.getItem('recipe');
+ console.log('recipe = ' + recipe);
+// See if we have an autosave value
+// (this will only happen if the page is accidentally refreshed)
+if (sessionStorage.getItem("autosave")) {
+  // Restore the contents of the text field
+  recipe.value = sessionStorage.getItem("autosave");
+  console.log('from autosave = ' + recipe);
+};
   const settings = {
     method: 'get',
   };
-
-  fetch('/nodekek/images', settings).then((response) => {
+console.log('x = ' + recipe);
+  fetch('/nodekek/images/'+recipe, settings).then((response) => {
     return response.json();
   }).then((json) => {
     console.log(json[0]);

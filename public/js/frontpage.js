@@ -11,14 +11,24 @@ const getRecipes = () => {
   }).then((json) => {
     console.log(json);
     list.innerHTML = '';
-    var x = 0;
+    let x = 0;
     json.forEach((rPICTURE) => {
       const li = document.createElement('li');
       const title = document.createElement('h3');
+      const time = document.createElement('h3');
       title.innerHTML = json[x].rNAME;
+      time.innerHTML = prepTime(json[x].rPREPTIME);
       li.appendChild(title);
+      li.appendChild(time);
       const img = document.createElement('img');
       img.src = './thumbnails/' + json[x].rTHUMBNAIL;
+      const id = json[x].rID;
+      img.addEventListener('click', () => { 
+        openRecipe(id);
+      });
+      title.addEventListener('click', () => { 
+        openRecipe(id);
+      });
       console.log(json[x].rTHUMBNAIL);
       li.appendChild(img);
       list.appendChild(li);
@@ -28,3 +38,16 @@ const getRecipes = () => {
 };
 
 getRecipes();
+
+const prepTime= (x) => {
+  if(x > 60){
+    let y = (x/60).toFixed(1);
+    return y + ' h';
+  }else return x + ' min';
+}
+
+const openRecipe= (x) => {
+  console.log(x);
+  sessionStorage.setItem('recipe', x);
+  window.location.pathname = '/nodekek/recipedetails.html';
+}
