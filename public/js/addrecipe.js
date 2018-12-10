@@ -17,4 +17,4 @@ const sendForm = (evt) => {
 };
 
 
-//frm.addEventListener('submit', sendForm);
+frm.addEventListener('submit', sendForm);
