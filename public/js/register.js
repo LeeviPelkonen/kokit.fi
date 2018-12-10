@@ -10,7 +10,7 @@ const registerForm = (evt) => {
         body: ff,
     };
 
-    fetch('nodekek/register', settings).then((response) => {
+    fetch('/nodekek/register', settings).then((response) => {
         return response.json();
     }).then((json) => {
         console.log(json);

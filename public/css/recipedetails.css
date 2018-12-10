@@ -7,6 +7,7 @@
 }
 
 .foodtitle {
+    word-break: break-all;
     width: 100%;
     font-size: 3rem;
     padding: 1rem;
