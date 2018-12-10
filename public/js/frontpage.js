@@ -48,7 +48,9 @@ const getRecipes = (x) => {
             let x = 0;
             json.forEach((rPICTURE) => {
                 console.log('searching recipe by name');
-                if ((json[x].rNAME).includes(x)) {
+                console.log((json[x].rNAME));
+                console.log((title));
+                if ((json[x].rNAME).hasOwnProperty(title)) {
                     console.log('sfound one');
                     const li = document.createElement('li');
                     const title = document.createElement('h3');
