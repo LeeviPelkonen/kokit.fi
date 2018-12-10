@@ -101,7 +101,7 @@ const loginEvent = (evt) => {
   });
 };
 
-lbutton.addEventListener('submit', loginEvent);
+//lbutton.addEventListener('submit', loginEvent);
 
 login.addEventListener("click", close);
 logbutton.addEventListener("click", show);
