@@ -95,4 +95,4 @@ const searchRecipes = () => {
     getRecipes(title);
 };
 
-searchButt.addEventListener('click', searchRecipes());
+searchButt.addEventListener('click',searchRecipes);
