@@ -62,7 +62,7 @@ passport.use(new LocalStrategy(
     }
 ));
 
-passport.authenticate('local', { successRedirect: '/nodekek/', failureRedirect: '/nodekek/' }));
+//passport.authenticate('local', { successRedirect: '/nodekek/', failureRedirect: '/nodekek/' }));
 
 app.use(passport.initialize());
 app.use(passport.session());
