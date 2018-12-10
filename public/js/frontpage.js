@@ -2,7 +2,7 @@
 
 const list = document.querySelector('#recipelist');
 const searchButton = document.getElementById('#searchButton');
-searchButton.addEventListener('click' = (e) => {
+searchButton.addEventListener('click' ,(e) => {
     console.log('clicking stuff');
     searchRecipes();
 });
