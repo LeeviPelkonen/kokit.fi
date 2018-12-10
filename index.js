@@ -31,13 +31,11 @@ const cb = (result, res) => {
 app.use(express.static('public'));
 
 passport.serializeUser((user, done) => {
-  done(null, user.id);
+  done(null, user);
 });
 
 passport.deserializeUser((id, done) => {
-  connection.query(('SELECT * FROM users where id =' +id) => {
-      done(err, rows[0]);
-  });
+  done(null, user);
 });
 
 app.use(session({
@@ -47,11 +45,32 @@ app.use(session({
   cookie: { secure: true}
 }));
 
-passport.use(new LocalStrategy(username, password, done) => {
-  if( connection.query('SELECT * FROM users WHERE uUSERNAME = ' '+username') || password !== 'same thing here')
-  {return done(null, false); }
-  return done(null, {username: username});
-});
+passport.use(new LocalStrategy(
+  (username, password, done) => {
+    console.log('Here we go: ' + username);
+    let res = null;
+
+    const doLogin = (username, password) => {
+      return new Promise((resolve, reject) => {
+        db.login([username, password], connection, (result) => {
+          console.log('result', result.length);
+          resolve(result);
+        });
+      });
+    };
+
+    return doLogin(username, password).then((res) => {
+      if (res.length < 1) {
+        console.log('undone');
+        return done(null, false);
+      } else {
+        console.log('done');
+        return done(null, {username: username});
+      }
+    });
+
+  },
+));
 
 app.use(passport.initialize());
 app.use(passport.session());
