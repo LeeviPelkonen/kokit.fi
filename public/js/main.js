@@ -4,9 +4,10 @@
 // Get the modal
 const modal2 = document.getElementById('id02');
 const modal1 = document.getElementById('id01');
+const loginform = document.getElementById('loginform');
 
 
-
+const lbutton = document.getElementById('lbutton');
 const login = document.getElementById('login');
 const logbutton = document.getElementById('logbutton');
 const cancelbtn = document.getElementById('cancelbtn');
@@ -84,6 +85,24 @@ function reg() {
 function exit() {
   document.getElementById('id02').style.display="none";
 }
+
+const loginEvent = (evt) => {
+  evt.preventDefault();
+  const ff = new FormData(loginform);
+  const settings = {
+    method: 'post',
+    body: ff,
+  };
+  fetch('/nodekek/login', settings).then((response) => {
+    console.log(response.json());
+    return response.json();
+  }).then((json) => {
+    console.log(json());
+  });
+};
+
+lbutton.addEventListener('submit', loginEvent);
+
 login.addEventListener("click", close);
 logbutton.addEventListener("click", show);
 cancelbtn.addEventListener("click", reg);
@@ -101,6 +120,8 @@ window.onclick = event => {
     modal1.style.display = "none";
   }
 };
+
+
 
 
 
