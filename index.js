@@ -188,7 +188,7 @@ const options = {
 const today = Date();
 app.post('/register', (req, res) => {
   const data = [
-    req.body.uname,
+    req.body.uUSERNAME,
     req.body.fname,
     req.body.lname,
     null,
