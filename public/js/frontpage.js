@@ -13,7 +13,7 @@ const getRecipes = (x) => {
         fetch('/nodekek/recipes', settings).then((response) => {
             return response.json();
         }).then((json) => {
-            console.log(json);
+            //console.log(json);
             list.innerHTML = '';
             let x = 0;
             json.forEach((rPICTURE) => {
@@ -33,7 +33,7 @@ const getRecipes = (x) => {
                     title.addEventListener('click', () => {
                         openRecipe(id);
                     });
-                    console.log(json[x].rTHUMBNAIL);
+                    //console.log(json[x].rTHUMBNAIL);
                     li.appendChild(img);
                     list.appendChild(li);
                     x++;
@@ -43,15 +43,15 @@ const getRecipes = (x) => {
         fetch('/nodekek/recipes', settings).then((response) => {
             return response.json();
         }).then((json) => {
-            console.log(json);
+            //console.log(json);
             list.innerHTML = '';
             let x = 0;
             json.forEach((rPICTURE) => {
-                console.log('searching recipe by name');
-                console.log((json[x].rNAME));
-                console.log((title));
-                if ((json[x].rNAME).includes(title)) {
-                    console.log('sfound one');
+                //console.log('searching recipe by name');
+                //console.log((json[x].rNAME));
+                //console.log((title));
+                if (((json[x].rNAME).toLowerCase).includes(title.toLowerCase)) {
+                    //console.log('sfound one');
                     const li = document.createElement('li');
                     const title = document.createElement('h3');
                     const time = document.createElement('h3');
@@ -68,7 +68,7 @@ const getRecipes = (x) => {
                     title.addEventListener('click', () => {
                         openRecipe(id);
                     });
-                    console.log(json[x].rTHUMBNAIL);
+                    //console.log(json[x].rTHUMBNAIL);
                     li.appendChild(img);
                     list.appendChild(li);
                 };
@@ -95,7 +95,7 @@ const openRecipe= (x) => {
 
 const searchRecipes = () => {
     title = document.querySelector('#searchKeyword').value;
-    console.log(title);
+    //console.log(title);
     getRecipes(title);
 };
 
