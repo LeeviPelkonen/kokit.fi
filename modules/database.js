@@ -77,7 +77,7 @@ const insert = (data, connection, callback) => {
 
 const register = (data, connection, callback) => { 
   connection.execute(
-    'INSERT INTO users (uUSERNAME, uFNAME, uLNAME, uAVATAR, uPASSWORD) VALUES (?, ?, ?, ?, ?);',
+    'INSERT INTO users (uUSERNAME, uFNAME, uLNAME, uAVATAR, uDATEJOINED, uPASSWORD) VALUES (?, ?, ?, ?, ?, ?);',
     data,
     (err, results, fields) => {
       console(err);
