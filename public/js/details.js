@@ -29,6 +29,7 @@ function decreaseValue() {
 
 }
 
+//Changes the details to the specified recipe
 const getImage = () => {
 
 // Get the text field that we're going to track
@@ -43,12 +44,10 @@ if (sessionStorage.getItem("autosave")) {
 };
   const settings = {
     method: 'get',
-  };
-console.log('x = ' + recipe);
+};
   fetch('/nodekek/images/'+recipe, settings).then((response) => {
     return response.json();
   }).then((json) => {
-    console.log(json[0]);
     image.src = './uploads/' + json[0].rPICTURE;
     foodName.innerText = json[0].rNAME;
     instructions.innerText = json[0].rINSTRUCTIONS;
@@ -68,7 +67,6 @@ console.log('x = ' + recipe);
     fetch('/nodekek/user/'+json[0].rUSERID).then((response) => {
       return response.json();
     }).then((json) => {
-      console.log(json);
       userName.innerText = "Username: " + json[0].uUSERNAME;
       fullName.innerText = "Name: " + json[0].uFNAME + " " + json[0].uLNAME;
       dateJoined.innerText = "Date joined: " + json[0].uDATEJOINED;
