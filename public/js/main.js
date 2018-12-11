@@ -69,6 +69,7 @@ function openMenu(evt) {
   })
 }
 
+//These small functions work for the modal and close and switch the content inside it.
 function show() {
   document.getElementById('id01').style.display="block";
 }
