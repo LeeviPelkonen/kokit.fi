@@ -24,7 +24,7 @@ const registerForm = (evt) => {
 
 form.addEventListener('submit', registerForm);
 
-
+//This function is used to check that the repeat password is the same as the password the user has entered for the first field.
 function validatePassword(){
     if(password.value != confirm_password.value) {
       confirm_password.setCustomValidity("Passwords Don't Match");
