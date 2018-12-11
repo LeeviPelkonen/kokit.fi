@@ -1,6 +1,4 @@
 'use strict';
-//const testform = document.querySelector('#testform');
-//const but = document.querySelector('#submitB');
 // Get the modal
 const modal2 = document.getElementById('id02');
 const modal1 = document.getElementById('id01');
@@ -16,21 +14,7 @@ const closebtn = document.getElementById('closebtn');
 const burger = document.getElementById('burger');
 const opensearch = document.getElementById('openSearchButton');
 
-/*const testFunc = (evt) => {
-  evt.preventDefault();
-  const fd = new FormData(testform);
-
-  const settings = {
-    method: 'post',
-    body: fd,
-  };
-  fetch('/upload', settings).then((response) => {
-    return response.json();
-  }).then((json) => {
-    console.log(json);
-  });
-};*/
-
+//opens advanced search
 function openSearch(evt) {
   evt.preventDefault();
   var x = document.querySelectorAll(".advsearch");
@@ -43,6 +27,7 @@ function openSearch(evt) {
       li.classList.remove('visibleFull');
     }
   })
+    //changes arrows pointing direction
   var y = document.querySelectorAll("#openSearchButton");
   y.forEach((li) => {
     if (li.classList.contains('fa-angle-down')) {
@@ -55,6 +40,7 @@ function openSearch(evt) {
   })
 }
 
+//opens burgermenu when on mobile
 function openMenu(evt) {
   evt.preventDefault();
   var x = document.querySelectorAll(".advnav");
@@ -121,9 +107,3 @@ window.onclick = event => {
     modal1.style.display = "none";
   }
 };
-
-
-
-
-
-//testform.addEventListener('submit', testFunc);

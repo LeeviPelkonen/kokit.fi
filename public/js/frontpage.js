@@ -5,16 +5,19 @@ const searchButt = document.getElementById('searchButton');
 const quickButt = document.getElementById('quickButton');
 let title = '';
 
+
+//Gets recipes to the frontpage
 const getRecipes = (x) => {
     console.log('getting recipes');
     const settings = {
         method: 'get',
     };
+
+    //Shows all the recipes when there is no keyword
     if (x == '') {
         fetch('/nodekek/recipes', settings).then((response) => {
             return response.json();
         }).then((json) => {
-            //console.log(json);
             list.innerHTML = '';
             let x = 0;
             json.forEach((rPICTURE) => {
@@ -34,17 +37,17 @@ const getRecipes = (x) => {
                     title.addEventListener('click', () => {
                         openRecipe(id);
                     });
-                    //console.log(json[x].rTHUMBNAIL);
                     li.appendChild(img);
                     list.appendChild(li);
                     x++;
             });
-        });
+            });
+
+        //shows all quick recipes
     } if (x == 'quick') {
         fetch('/nodekek/recipes', settings).then((response) => {
             return response.json();
         }).then((json) => {
-            //console.log(json);
             list.innerHTML = '';
             let x = 0;
             json.forEach((rPICTURE) => {
@@ -65,7 +68,6 @@ const getRecipes = (x) => {
                 title.addEventListener('click', () => {
                     openRecipe(id);
                 });
-                //console.log(json[x].rTHUMBNAIL);
                 li.appendChild(img);
                 list.appendChild(li);
                 }
@@ -73,20 +75,17 @@ const getRecipes = (x) => {
             });
         });
     } else {
+
+        //shows recipes using keywords
         fetch('/nodekek/recipes', settings).then((response) => {
             return response.json();
         }).then((json) => {
-            //console.log(json);
             list.innerHTML = '';
             let x = 0;
             json.forEach((rPICTURE) => {
-                //console.log('searching recipe by name');
-                //console.log((json[x].rNAME));
-                //console.log((title));
                 const name = (json[x].rNAME).toLowerCase();
                 const search = title.toLowerCase();
                 if (name.includes(search)) {
-                    //console.log('sfound one');
                     const li = document.createElement('li');
                     const title = document.createElement('h3');
                     const time = document.createElement('h3');
@@ -103,7 +102,6 @@ const getRecipes = (x) => {
                     title.addEventListener('click', () => {
                         openRecipe(id);
                     });
-                    //console.log(json[x].rTHUMBNAIL);
                     li.appendChild(img);
                     list.appendChild(li);
                 };
@@ -115,6 +113,8 @@ const getRecipes = (x) => {
 
 getRecipes(title);
 
+
+//changes time to hours if the preperation time is over 60mins
 const prepTime= (x) => {
   if(x > 60){
     let y = (x/60).toFixed(1);
@@ -130,13 +130,11 @@ const openRecipe= (x) => {
 
 const searchRecipes = () => {
     title = document.querySelector('#searchKeyword').value;
-    //console.log(title);
     getRecipes(title);
 };
 
 const searchQuick = () => {
     title = 'quick';
-    //console.log(title);
     getRecipes(title);
 };
 
