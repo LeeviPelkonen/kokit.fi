@@ -38,6 +38,7 @@ passport.deserializeUser((id, done) => {
   done(null, user);
 });
 
+//session
 app.use(session({
   secret: 'keyboard LOL cat',
   resave: true,
@@ -45,6 +46,7 @@ app.use(session({
   cookie: { secure: true }
 }));
 
+//loging in to user
 app.post('/login', (req, res, next) => {
   console.log(req.query);
   const data = [
@@ -71,12 +73,14 @@ app.use(passport.session());
 
 app.set('trust proxy');
 
+//uploads image
 app.post('/upload', upload.single('mediafile'), (req, res, next) => {
   console.log('/upload happens now');
   console.log('req.query', req.query);
   next();
 });
 
+//uploads thumbnail
 app.use('/upload', (req, res, next) => {
   resize.doResize(req.file.path, 300,
       './public/thumbnails/' + req.file.filename + '_thumb').then(() => {
@@ -84,6 +88,7 @@ app.use('/upload', (req, res, next) => {
   });
 });
 
+//uploads medium
 app.use('/upload', (req, res, next) => {
   resize.doResize(req.file.path, 640,
       './public/medium/' + req.file.filename + '_medium').then(() => {
@@ -91,6 +96,7 @@ app.use('/upload', (req, res, next) => {
   });
 });
 
+//setting upload data
 app.use('/upload', (req, res, next) => {
   console.log(req.body);
   const data = [
@@ -108,10 +114,13 @@ app.use('/upload', (req, res, next) => {
   db.insert(data, connection, next);
 });
 
+//uploading new recipes to the database
 app.use('/upload', (req, res) => {
   db.select(connection, cb, res);
 });
 
+
+//gets recipe using recipe id
 app.get('/images/:id', function(req, res) {
   console.log('recipe ' + req.params.id);
   db.selectRecipe(connection, [req.params.id], (response) => {
@@ -119,10 +128,12 @@ app.get('/images/:id', function(req, res) {
   });
 });
 
+//gets recipes
 app.get('/images', (req, res) => {
   db.selectRecipe(connection, cb, res);
 });
 
+//gets user using userid
 app.get('/user/:id', function(req, res) {
   console.log('user ' + req.params.id);
   db.selectUser(connection, [req.params.id], (response) => {
@@ -130,25 +141,7 @@ app.get('/user/:id', function(req, res) {
   });
 });
 
-/*
-app.patch('/images', (req, res) => {
-	const data = [
-		req.body.category,
-		req.body.title,
-		req.body.details,
-		req.body.mID,
-		];
-	db.update(data,connection).then((result) => {
-	}).catch((err) => {
-		console.log(err);
-	});
-});
-
-app.delete('/images', (req, res) => {
-	const item = [req.body.mID];
-	db.deleteImage(item, connection);
-});
-*/
+//search for the recipe using keyword
 app.get('/search', (req, res) => {
   db.searchTitle([req.query.title], connection).then((result) => {
     res.send(result);
@@ -157,6 +150,7 @@ app.get('/search', (req, res) => {
   });
 });
 
+//selects all recipes
 app.get('/recipes', (req, res) => {
   db.selectAllRecipes(connection, cb, res);
 });
